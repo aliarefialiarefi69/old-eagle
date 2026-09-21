@@ -1,1 +1,112 @@
 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عقاب پیر (OEAG)</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #050505;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.card {
+    margin-top: 30px;
+    padding: 25px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background: #111;
+}
+
+.info {
+    margin: 12px 0;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.address {
+    word-break: break-all;
+    font-size: 13px;
+    color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<p>
+<a href="index.html">🇬🇧 English</a>
+</p>
+
+<img class="logo"
+src="https://raw.githubusercontent.com/aliarefialiarefi69/old-eagle-logo/main/old_eagle_256x256_transparent.png"
+alt="Old Eagle Logo">
+
+<h1>عقاب پیر</h1>
+
+<div class="card">
+
+<div class="info"><strong>شبکه:</strong> TON</div>
+
+<div class="info"><strong>کل عرضه:</strong> 1,000,000,000 OEAG</div>
+
+<div class="info"><strong>اعشار:</strong> 9</div>
+
+<div class="info"><strong>مالکیت:</strong> لغو شده</div>
+
+<h3>آدرس جتون مستر</h3>
+
+<div class="address">
+EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
+</div>
+
+<br>
+
+<a href="https://app.ston.fi/swap?ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M">
+خرید OEAG
+</a>
+
+</div>
+
+<p>
+Old Eagle یک توکن دیجیتال جامعه‌محور بر بستر بلاکچین TON است.
+</p>
+
+<p>
+<a href="whitepaper.html">
+📄 مطالعه وایت‌پیپر Old Eagle
+</a>
+</p>
+
+</div>
+
+</body>
+</html>
