@@ -17,27 +17,7 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
-    padding: 30px 20px 50px;
-}
-
-.language {
-    text-align: right;
-    margin-bottom: 20px;
-}
-
-.language button {
-    padding: 9px 15px;
-    margin: 3px;
-    border: 1px solid #555;
-    border-radius: 8px;
-    background: #222;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.language button:hover {
-    background: #444;
+    padding: 50px 20px;
 }
 
 .logo {
@@ -85,62 +65,32 @@ a {
     font-size: 13px;
     color: #aaa;
 }
-
-.description {
-    margin-top: 25px;
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.whitepaper {
-    margin-top: 20px;
-}
-
-[dir="rtl"] {
-    direction: rtl;
-}
-
-[dir="rtl"] .language {
-    text-align: left;
-}
 </style>
 </head>
 
 <body>
 
-<div class="container" id="page">
-
-<div class="language">
-    <button onclick="setLanguage('en')">🇬🇧 English</button>
-    <button onclick="setLanguage('fa')">🇮🇷 فارسی</button>
-</div>
+<div class="container">
 
 <img class="logo"
 src="https://raw.githubusercontent.com/aliarefialiarefi69/old-eagle-logo/main/old_eagle_256x256_transparent.png"
 alt="Old Eagle Logo">
 
 <h1>OLD EAGLE</h1>
+
 <div class="symbol">OEAG</div>
 
 <div class="card">
 
-<div class="info">
-<strong id="networkLabel">Network:</strong> TON
-</div>
+<div class="info"><strong>Network:</strong> TON</div>
 
-<div class="info">
-<strong id="supplyLabel">Total Supply:</strong> 1,000,000,000 OEAG
-</div>
+<div class="info"><strong>Total Supply:</strong> 1,000,000,000 OEAG</div>
 
-<div class="info">
-<strong id="decimalsLabel">Decimals:</strong> 9
-</div>
+<div class="info"><strong>Decimals:</strong> 9</div>
 
-<div class="info">
-<strong id="ownershipLabel">Ownership:</strong> Revoked
-</div>
+<div class="info"><strong>Ownership:</strong> Revoked</div>
 
-<h3 id="addressTitle">Jetton Master Address</h3>
+<h3>Jetton Master Address</h3>
 
 <div class="address">
 EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
@@ -148,74 +98,23 @@ EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
 
 <br>
 
-<a id="buyButton"
-href="https://app.ston.fi/swap?ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M">
+<a href="https://app.ston.fi/swap?ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M">
 BUY OEAG
 </a>
 
 </div>
 
-<p class="description" id="description">
+<p>
 Old Eagle is a community-driven digital token on the TON blockchain.
 </p>
 
-<div class="whitepaper">
-<a id="whitepaperButton" href="whitepaper.html">
+<p>
+<a href="whitepaper.html">
 📄 Read the Old Eagle Whitepaper
 </a>
-</div>
+</p>
 
 </div>
-
-<script>
-
-function setLanguage(lang) {
-
-    if (lang === "fa") {
-
-        document.documentElement.lang = "fa";
-        document.documentElement.dir = "rtl";
-
-        document.title = "عقاب پیر (OEAG)";
-
-        document.getElementById("networkLabel").innerText = "شبکه:";
-        document.getElementById("supplyLabel").innerText = "کل عرضه:";
-        document.getElementById("decimalsLabel").innerText = "اعشار:";
-        document.getElementById("ownershipLabel").innerText = "مالکیت:";
-        document.getElementById("addressTitle").innerText = "آدرس جتون مستر";
-
-        document.getElementById("buyButton").innerText = "خرید OEAG";
-
-        document.getElementById("description").innerText =
-        "Old Eagle یک توکن دیجیتال جامعه‌محور بر بستر بلاکچین TON است.";
-
-        document.getElementById("whitepaperButton").innerText =
-        "📄 مطالعه وایت‌پیپر Old Eagle";
-
-    } else {
-
-        document.documentElement.lang = "en";
-        document.documentElement.dir = "ltr";
-
-        document.title = "Old Eagle (OEAG)";
-
-        document.getElementById("networkLabel").innerText = "Network:";
-        document.getElementById("supplyLabel").innerText = "Total Supply:";
-        document.getElementById("decimalsLabel").innerText = "Decimals:";
-        document.getElementById("ownershipLabel").innerText = "Ownership:";
-        document.getElementById("addressTitle").innerText = "Jetton Master Address";
-
-        document.getElementById("buyButton").innerText = "BUY OEAG";
-
-        document.getElementById("description").innerText =
-        "Old Eagle is a community-driven digital token on the TON blockchain.";
-
-        document.getElementById("whitepaperButton").innerText =
-        "📄 Read the Old Eagle Whitepaper";
-    }
-}
-
-</script>
 
 </body>
 </html>
