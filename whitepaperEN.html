@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Old Eagle (OEAG) — Whitepaper</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
 body{
     font-family:Arial,Helvetica,sans-serif;
     color:#fff;
     background:
-      radial-gradient(circle at 0% 0%,rgba(0,229,255,.16),transparent 28%),
-      radial-gradient(circle at 100% 10%,rgba(168,85,247,.18),transparent 30%),
-      #050816;
+        radial-gradient(circle at 0% 0%,rgba(0,229,255,.18),transparent 28%),
+        radial-gradient(circle at 100% 10%,rgba(168,85,247,.20),transparent 30%),
+        #050816;
     line-height:1.8;
 }
 
-body:before{
+body::before{
     content:"";
     position:fixed;
     inset:0;
     pointer-events:none;
     opacity:.12;
     background-image:
-      linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+        linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
     background-size:45px 45px;
 }
 
@@ -58,6 +64,7 @@ h1{
     font-size:clamp(38px,8vw,65px);
     background:linear-gradient(90deg,#fff,#67e8f9,#c084fc);
     -webkit-background-clip:text;
+    background-clip:text;
     color:transparent;
 }
 
@@ -70,8 +77,7 @@ h1{
     margin-top:25px;
 }
 
-.language a,
-.home{
+.language a{
     display:inline-block;
     padding:10px 18px;
     margin:5px;
@@ -80,10 +86,10 @@ h1{
     text-decoration:none;
     border:1px solid rgba(255,255,255,.15);
     background:rgba(255,255,255,.06);
+    transition:.3s;
 }
 
-.language a:hover,
-.home:hover{
+.language a:hover{
     border-color:#67e8f9;
     color:#67e8f9;
 }
@@ -128,26 +134,48 @@ p{
     border-color:rgba(250,204,21,.25);
 }
 
+.contract{
+    word-break:break-all;
+    color:#67e8f9;
+    margin-top:12px;
+}
+
 footer{
     text-align:center;
     padding:40px 0;
     color:#64748b;
 }
 
-@media(max-width:600px){
-    section{padding:22px}
-    .info{grid-template-columns:1fr}
+a{
+    color:#67e8f9;
 }
+
+@media(max-width:600px){
+
+    section{
+        padding:22px;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+    }
+
+}
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
+
 <header>
 
-<div class="logo">🦅</div>
+<div class="logo">
+🦅
+</div>
 
 <h1>Old Eagle</h1>
 
@@ -156,9 +184,19 @@ OEAG — Whitepaper
 </div>
 
 <div class="language">
-<a href="whitepaper.html">English</a>
-<a href="whitepaper-fa.html">فارسی</a>
-<a class="home" href="index.html">🏠 Home</a>
+
+<a href="whitepaperEN.html">
+English
+</a>
+
+<a href="whitepaperFA.html">
+فارسی
+</a>
+
+<a href="index.html">
+🏠 Home
+</a>
+
 </div>
 
 </header>
@@ -184,17 +222,35 @@ activities and future Web3-oriented utilities.
 
 <div class="info">
 
-<div><strong>Name:</strong><br>Old Eagle</div>
+<div>
+<strong>Name:</strong><br>
+Old Eagle
+</div>
 
-<div><strong>Symbol:</strong><br>OEAG</div>
+<div>
+<strong>Symbol:</strong><br>
+OEAG
+</div>
 
-<div><strong>Blockchain:</strong><br>TON</div>
+<div>
+<strong>Blockchain:</strong><br>
+TON
+</div>
 
-<div><strong>Standard:</strong><br>Jetton</div>
+<div>
+<strong>Standard:</strong><br>
+Jetton
+</div>
 
-<div><strong>Total Supply:</strong><br>1,000,000,000 OEAG</div>
+<div>
+<strong>Total Supply:</strong><br>
+1,000,000,000 OEAG
+</div>
 
-<div><strong>Decimals:</strong><br>9</div>
+<div>
+<strong>Decimals:</strong><br>
+9
+</div>
 
 </div>
 
@@ -209,16 +265,20 @@ activities and future Web3-oriented utilities.
 The official OEAG token contract is:
 </p>
 
-<p style="margin-top:12px;word-break:break-all;color:#67e8f9">
+<p class="contract">
 EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
 </p>
 
 <p style="margin-top:15px">
-<a href="https://tonviewer.com/EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M"
-target="_blank"
-style="color:#facc15">
+
+<a
+href="https://tonviewer.com/EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M"
+target="_blank">
+
 View contract on Tonviewer →
+
 </a>
+
 </p>
 
 </section>
@@ -349,11 +409,13 @@ listing.
 </p>
 
 <p style="margin-top:15px">
+
 <strong>
 The full responsibility for any purchase, sale, transfer,
 swap or other trading activity involving OEAG rests with
 the buyer or trader.
 </strong>
+
 </p>
 
 </section>
@@ -380,10 +442,19 @@ EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
 
 
 <footer>
-Old Eagle (OEAG)<br>
-Built on TON<br><br>
+
+Old Eagle (OEAG)
+
+<br>
+
+Built on TON
+
+<br><br>
+
 © 2026 Old Eagle
+
 </footer>
+
 
 </div>
 
