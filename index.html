@@ -7,7 +7,6 @@
 <title>Old Eagle (OEAG)</title>
 
 <meta name="description" content="Old Eagle (OEAG) - A community-driven project built on the TON blockchain.">
-<meta name="theme-color" content="#06101c">
 
 <style>
 * {
@@ -22,14 +21,9 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    background:
-        radial-gradient(circle at 10% 10%, rgba(0,225,255,.20), transparent 30%),
-        radial-gradient(circle at 90% 20%, rgba(130,50,255,.20), transparent 30%),
-        radial-gradient(circle at 50% 100%, rgba(255,200,0,.10), transparent 35%),
-        #050914;
-    min-height: 100vh;
-    overflow-x: hidden;
+    color: #ffffff;
+    background: #050914;
+    line-height: 1.6;
 }
 
 .container {
@@ -39,7 +33,8 @@ body {
 }
 
 header {
-    padding: 22px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav {
@@ -52,7 +47,6 @@ header {
 .brand {
     font-size: 22px;
     font-weight: 900;
-    letter-spacing: 1px;
 }
 
 .brand span {
@@ -65,9 +59,226 @@ header {
 }
 
 .lang a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    padding: 9px 14px;
+    padding: 8px 13px;
+    border-radius: 20px;
+    background: #111827;
+    border: 1px solid #263244;
+    font-size: 14px;
+}
+
+.hero {
+    text-align: center;
+    padding: 70px 0 50px;
+}
+
+.logo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00e5ff;
+    box-shadow: 0 0 45px rgba(0,229,255,0.25);
+    margin-bottom: 25px;
+    background: #000000;
+}
+
+h1 {
+    font-size: clamp(40px, 8vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #aeb9c9;
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
     border-radius: 30px;
-    background: rgba(255,255,255,.06);
-    border: 
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid #263244;
+    background: #111827;
+}
+
+.btn.primary {
+    background: #00b8d4;
+    border-color: #00e5ff;
+    color: #001014;
+}
+
+section {
+    padding: 45px 0;
+}
+
+.card {
+    background: #0b1220;
+    border: 1px solid #1d2a3d;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+h3 {
+    margin-bottom: 8px;
+    color: #00e5ff;
+}
+
+p {
+    color: #b9c4d3;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat {
+    text-align: center;
+    background: #0b1220;
+    border: 1px solid #1d2a3d;
+    border-radius: 16px;
+    padding: 25px 15px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.contract {
+    word-break: break-all;
+    font-family: monospace;
+    background: #050914;
+    border: 1px solid #1d2a3d;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 12px;
+    color: #8defff;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    color: #778398;
+}
+
+@media (max-width: 700px) {
+    .stats,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero {
+        padding-top: 45px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <div class="brand">
+            Old Eagle <span>OEAG</span>
+        </div>
+
+        <div class="lang">
+            <a href="whitepaperEN.html">English</a>
+            <a href="whitepaperFA.html">فارسی</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="container">
+
+        <img
+            class="logo"
+            src="1000022248-1.png"
+            alt="Old Eagle Logo"
+        >
+
+        <h1>Old Eagle</h1>
+
+        <p class="subtitle">
+            OEAG is a community-driven digital asset built on the TON blockchain,
+            focused on community, NFTs and future Web3 development.
+        </p>
+
+        <div class="buttons">
+            <a
+                class="btn primary"
+                href="https://app.ston.fi/swap"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Buy OEAG
+            </a>
+
+            <a class="btn" href="whitepaperEN.html">
+                Whitepaper
+            </a>
+
+            <a class="btn" href="whitepaperFA.html">
+                فارسی
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>OEAG</strong>
+                Token
+            </div>
+
+            <div class="stat">
+                <strong>TON</strong>
+                Network
+            </div>
+
+            <div class="
