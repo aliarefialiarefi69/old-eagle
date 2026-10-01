@@ -1,233 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Old Eagle (OEAG) | Whitepaper</title>
+<title>Old Eagle (OEAG) — Whitepaper</title>
 
 <style>
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body {
-    font-family: Arial, Tahoma, sans-serif;
-    background:
-        radial-gradient(circle at 10% 10%, #123d52 0%, transparent 30%),
-        radial-gradient(circle at 90% 20%, #40206d 0%, transparent 30%),
-        radial-gradient(circle at 50% 100%, #164d45 0%, transparent 30%),
-        #05070b;
-    color: #f5f7fa;
-    line-height: 1.8;
-    padding: 18px 12px;
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:
+radial-gradient(circle at 10% 10%,rgba(0,225,255,.15),transparent 30%),
+radial-gradient(circle at 90% 20%,rgba(130,50,255,.15),transparent 30%),
+#050914;
+
+color:white;
+line-height:1.8;
 }
 
 .container {
-    max-width: 950px;
-    margin: auto;
+
+width:92%;
+max-width:900px;
+margin:auto;
+
 }
 
-.header {
-    text-align: center;
-    padding: 35px 20px;
-    margin-bottom: 22px;
-    border-radius: 28px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 25px 70px rgba(0,0,0,0.4);
+header {
+
+text-align:center;
+padding:45px 0;
+
 }
 
 .logo {
-    width: 190px;
-    height: 190px;
-    object-fit: contain;
-    border-radius: 50%;
-    border: 3px solid #00eaff;
-    box-shadow:
-        0 0 35px rgba(0,234,255,0.45),
-        0 0 80px rgba(126,87,255,0.25);
-    margin-bottom: 15px;
+
+width:150px;
+height:150px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+padding:4px;
+
+background:linear-gradient(135deg,#00eaff,#783cff,#ffd000);
+
+box-shadow:0 0 40px rgba(0,225,255,.25);
+
 }
 
 h1 {
-    font-size: 45px;
-    background: linear-gradient(90deg,#00eaff,#8b5cff,#ffd84d);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 5px;
+
+margin-top:25px;
+
+font-size:45px;
+
+background:linear-gradient(90deg,#fff,#00eaff,#a967ff);
+
+-webkit-background-clip:text;
+background-clip:text;
+
+color:transparent;
+
 }
 
 .subtitle {
-    color: #aeb8c8;
+
+color:#9facbf;
+
+margin-top:10px;
+
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 22px;
+.buttons {
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+margin:25px 0;
+
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 12px;
-    font-weight: bold;
-    background: linear-gradient(135deg,#087f9c,#6339c8);
-    transition: 0.25s;
+.buttons a {
+
+color:white;
+
+text-decoration:none;
+
+padding:10px 17px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.07);
+
+border:1px solid rgba(255,255,255,.15);
+
 }
 
-nav a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,234,255,0.2);
+section {
+
+margin:20px 0;
+
+padding:25px;
+
+background:rgba(255,255,255,.045);
+
+border:1px solid rgba(255,255,255,.09);
+
+border-radius:18px;
+
 }
 
-.section {
-    margin-bottom: 17px;
-    padding: 27px;
-    border-radius: 22px;
-    background: rgba(255,255,255,0.055);
-    border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
+h2 {
+
+color:#00e5ff;
+
+margin-bottom:12px;
+
 }
 
-.section h2 {
-    color: #00eaff;
-    font-size: 25px;
-    margin-bottom: 12px;
+p {
+
+color:#b2bfd1;
+
+margin-bottom:12px;
+
 }
 
-.section p {
-    color: #d4dae3;
+ul {
+
+padding-left:25px;
+
+color:#b2bfd1;
+
 }
 
-.section ul {
-    padding-left: 25px;
-    color: #d4dae3;
-}
+li {
 
-.section li {
-    margin: 7px 0;
-}
+margin-bottom:8px;
 
-.highlight {
-    border-left: 4px solid #ffd84d;
 }
 
 .contract {
-    direction: ltr;
-    text-align: center;
-    word-break: break-all;
-    margin-top: 15px;
-    padding: 16px;
-    border-radius: 14px;
-    background: rgba(0,0,0,0.4);
-    color: #00eaff;
+
+word-break:break-all;
+
+color:#00e5ff;
+
 }
 
-.warning {
-    color: #ffd84d !important;
-    font-weight: bold;
+footer {
+
+text-align:center;
+
+padding:40px;
+
+color:#718096;
+
 }
 
-.footer {
-    text-align: center;
-    color: #778293;
-    padding: 25px 10px;
-    font-size: 13px;
-}
-
-@media(max-width:600px) {
-
-    body {
-        padding: 10px 8px;
-    }
-
-    .header {
-        padding: 28px 15px;
-    }
-
-    .logo {
-        width: 150px;
-        height: 150px;
-    }
-
-    h1 {
-        font-size: 34px;
-    }
-
-    .section {
-        padding: 21px 17px;
-    }
-
-    .section h2 {
-        font-size: 21px;
-    }
-}
 </style>
+
 </head>
 
 <body>
 
+<header>
+
 <div class="container">
 
-<header class="header">
+<img
+src="1000022248-1.png"
+class="logo"
+alt="Old Eagle Logo"
+>
 
-    <img src="logo.png"
-         alt="Old Eagle Logo"
-         class="logo"
-         onerror="this.style.display='none';">
+<h1>Old Eagle (OEAG)</h1>
 
-    <h1>Old Eagle (OEAG)</h1>
+<p class="subtitle">
+Whitepaper
+</p>
 
-    <div class="subtitle">
-        Official Whitepaper
-    </div>
+<div class="buttons">
 
-    <nav>
+<a href="index.html">🏠 Home</a>
 
-        <a href="index.html">
-            🏠 Home
-        </a>
+<a href="whitepaperFA.html">🇮🇷 فارسی</a>
 
-        <a href="whitepaperEN.html">
-            English
-        </a>
+<a
+href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
+target="_blank">
+🦅 Buy OEAG
+</a>
 
-        <a href="https://aliarefialiarefi69.github.io/old-eagle/whitepaperFA.html">
-            فارسی
-        </a>
+</div>
 
-    </nav>
+</div>
 
 </header>
 
 
-<section class="section">
+<main class="container">
+
+
+<section>
 
 <h2>1. Introduction</h2>
 
 <p>
-Old Eagle (OEAG) is a community-driven project built on the TON blockchain.
-The project focuses on digital assets, NFTs, community activities and
-potential future Web3 utilities.
+Old Eagle (OEAG) is a community-driven digital project built on the TON blockchain.
+The project aims to connect digital assets, NFTs, community participation and future Web3 utilities.
 </p>
 
 <p>
-The goal of Old Eagle is to develop an active community and gradually
-explore different utilities around the OEAG ecosystem.
+Old Eagle focuses on transparency, gradual development and community involvement.
 </p>
 
 </section>
 
 
-<section class="section">
+<section>
 
 <h2>2. Token Information</h2>
 
@@ -239,7 +247,7 @@ explore different utilities around the OEAG ecosystem.
 
 <li><strong>Network:</strong> TON</li>
 
-<li><strong>Standard:</strong> Jetton</li>
+<li><strong>Token Type:</strong> Jetton</li>
 
 <li><strong>Total Supply:</strong> 1,000,000,000 OEAG</li>
 
@@ -252,191 +260,192 @@ explore different utilities around the OEAG ecosystem.
 </section>
 
 
-<section class="section">
+<section>
 
 <h2>3. Official Contract</h2>
 
 <p>
-The official Old Eagle (OEAG) Jetton contract on the TON blockchain is:
+The official OEAG Jetton contract is:
 </p>
 
-<div class="contract">
-
-EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
-
-</div>
+<p class="contract">
+EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M
+</p>
 
 </section>
 
 
-<section class="section highlight">
+<section>
 
-<h2>4. Fixed Supply & Transparency</h2>
+<h2>4. Fixed Supply</h2>
 
 <p>
 The total supply of OEAG is fixed at 1,000,000,000 tokens.
-Ownership of the contract has been revoked.
 </p>
 
 <p>
-This structure is intended to provide greater transparency regarding
-the token supply.
-</p>
-
-<p>
-There is no guarantee of price appreciation or financial return.
+Ownership has been revoked, meaning additional token minting is not controlled
+through the project owner.
 </p>
 
 </section>
 
 
-<section class="section">
+<section>
 
-<h2>5. Liquidity & Trading</h2>
+<h2>5. Liquidity and Trading</h2>
 
 <p>
-OEAG can be traded within the TON ecosystem and compatible decentralized
-markets.
+OEAG is intended to be tradable through decentralized infrastructure on the TON blockchain,
+including STON.fi.
 </p>
 
 <p>
-The market price of OEAG may change according to supply, demand,
-liquidity and overall market conditions.
-</p>
-
-<p>
-There is no fixed or guaranteed price for OEAG.
+Market prices can change depending on liquidity, trading activity, demand and supply.
+There is no fixed or guaranteed token price.
 </p>
 
 </section>
 
 
-<section class="section">
+<section>
 
 <h2>6. Planned Utility</h2>
 
 <ul>
 
-<li>Community activities and events</li>
+<li>NFT ecosystem activities</li>
 
-<li>NFT-related activities</li>
+<li>Community events and campaigns</li>
 
-<li>Community campaigns and rewards</li>
+<li>Potential community rewards</li>
 
-<li>Potential participation systems</li>
+<li>Future OEAG-related services</li>
 
-<li>Future OEAG services and tools</li>
-
-<li>Exploration of potential TON ecosystem partnerships</li>
+<li>Potential partnerships within the TON ecosystem</li>
 
 </ul>
 
 <p>
-These are development plans and are not guarantees of future products,
-services or partnerships.
+These utilities represent development plans and are not guarantees of future implementation.
 </p>
 
 </section>
 
 
-<section class="section">
+<section>
 
 <h2>7. NFT Plans</h2>
 
 <p>
-One potential development direction for Old Eagle is the integration
-of NFTs into the wider ecosystem.
+Old Eagle may expand into NFT-related activities and digital collectibles.
+Future NFT initiatives may provide additional opportunities for community participation.
 </p>
 
 <p>
-NFTs may potentially be used for community activities, events,
-participation systems and other future utilities.
+Specific features and benefits may change as the project develops.
 </p>
 
 </section>
 
 
-<section class="section">
+<section>
 
 <h2>8. Roadmap</h2>
 
 <ul>
 
-<li>
-<strong>Phase 1:</strong>
-Project foundation and launch.
-</li>
+<li><strong>Phase 1:</strong> Foundation and token launch</li>
 
-<li>
-<strong>Phase 2:</strong>
-Community development and social activities.
-</li>
+<li><strong>Phase 2:</strong> Community development</li>
 
-<li>
-<strong>Phase 3:</strong>
-OEAG utility development.
-</li>
+<li><strong>Phase 3:</strong> Utility development</li>
 
-<li>
-<strong>Phase 4:</strong>
-NFT and Web3 ecosystem development.
-</li>
+<li><strong>Phase 4:</strong> Ecosystem expansion</li>
 
-<li>
-<strong>Phase 5:</strong>
-Exploration of exchange opportunities.
-</li>
+<li><strong>Phase 5:</strong> Exchange applications</li>
 
-<li>
-<strong>Phase 6:</strong>
-Long-term Old Eagle ecosystem development.
-</li>
+<li><strong>Phase 6:</strong> Long-term development</li>
 
 </ul>
 
 <p>
-The roadmap represents development plans and may change according to
-project conditions and market circumstances.
+The roadmap describes development goals and may change according to project conditions,
+technical opportunities and community activity.
 </p>
 
 </section>
 
 
-<section class="section">
+<section>
 
-<h2>9. Transparency & Official Information</h2>
+<h2>9. Transparency</h2>
 
 <p>
-Official project information will be communicated through the Old Eagle
-website, official social channels and other official project resources.
+Old Eagle aims to provide publicly accessible information about the token,
+contract and project development through its official website and public blockchain data.
 </p>
 
 <p>
-Users should verify the official contract address and project information
-before interacting with OEAG.
+Users should independently verify contract addresses and official information before interacting with the token.
 </p>
 
 </section>
 
 
-<section class="section">
+<section>
 
-<h2>10. Risk Disclosure & Trading Responsibility</h2>
+<h2>10. Risk Disclosure</h2>
 
 <p>
-Cryptocurrencies and digital assets can involve significant volatility
-and financial risk.
+OEAG is a digital asset and its market value may fluctuate significantly.
+Digital assets involve risks, including market volatility, liquidity risk,
+technical risks and changes in the broader cryptocurrency market.
 </p>
 
 <p>
-There is no guarantee regarding the future price, liquidity, trading
-volume, number of users or exchange availability of OEAG.
-</p>
-
-<p class="warning">
-Any purchase, sale, transfer, trading or holding of OEAG is performed
-entirely at the buyer's or trader's own responsibility.
+There is no guarantee of price appreciation, exchange listings,
+adoption, liquidity or future project success.
 </p>
 
 <p>
-The buyer or trader is responsible for
+<strong>
+Any purchase, sale, transfer or trading of OEAG is undertaken entirely
+at the buyer's or trader's own responsibility and risk.
+</strong>
+</p>
+
+</section>
+
+
+<section>
+
+<h2>11. Official Information</h2>
+
+<p>
+Old Eagle (OEAG)
+</p>
+
+<p>
+Network: TON
+</p>
+
+<p class="contract">
+Contract:
+EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M
+</p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+© 2026 Old Eagle (OEAG)
+
+</footer>
+
+</body>
+</html>
