@@ -7,6 +7,7 @@
 <title>Old Eagle (OEAG) — Whitepaper</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -23,92 +24,126 @@ body {
     line-height: 2;
 }
 
-/* Language Buttons */
-.language-switch {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    padding: 30px 15px;
+/* Language buttons */
+
+#english {
+    display: none;
+}
+
+#fa:target ~ #english {
+    display: none;
+}
+
+#en:target ~ #persian {
+    display: none;
+}
+
+.language {
+    text-align: center;
+    padding: 25px 10px;
     direction: ltr;
 }
 
-.language-switch button {
-    min-width: 150px;
-    padding: 14px 25px;
-    border: 1px solid #444;
-    border-radius: 14px;
+.language a {
+    display: inline-block;
+    min-width: 135px;
+    margin: 5px;
+    padding: 12px 22px;
+
     background: #171717;
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.25s;
+    color: white;
+
+    border: 1px solid #3b3b3b;
+    border-radius: 14px;
+
+    text-decoration: none;
+    font-size: 17px;
+
+    transition: 0.2s;
 }
 
-.language-switch button:hover {
-    background: #252525;
-    border-color: #777;
-    transform: translateY(-2px);
-}
-
-.language-switch button.active {
+.language a:hover {
     background: #292929;
-    border-color: #888;
+    border-color: #777;
 }
 
 /* Main */
+
 .page {
+    width: 100%;
     max-width: 900px;
     margin: auto;
-    padding: 10px 20px 60px;
+    padding: 0 16px 60px;
 }
 
-/* Header */
+/* Hero */
+
 .hero {
     text-align: center;
-    background: linear-gradient(145deg, #111827, #080b11);
-    border: 1px solid #222;
-    border-radius: 0 0 30px 30px;
-    padding: 55px 25px;
-    margin-bottom: 35px;
+
+    background: linear-gradient(
+        145deg,
+        #111827,
+        #080b11
+    );
+
+    border: 1px solid #252525;
+
+    border-radius: 0 0 28px 28px;
+
+    padding: 45px 20px;
+
+    margin-bottom: 28px;
 }
 
-.logo {
-    font-size: 70px;
-    margin-bottom: 10px;
+.eagle {
+    font-size: 62px;
+    margin-bottom: 5px;
 }
 
 .hero h1 {
     margin: 0;
-    font-size: 42px;
-    letter-spacing: 1px;
+    font-size: 38px;
 }
 
 .hero p {
-    margin: 10px 0 0;
-    color: #bdbdbd;
-    font-size: 18px;
+    margin: 6px 0;
+    color: #c8c8c8;
+    font-size: 17px;
 }
 
 /* Cards */
+
 .card {
     background: #101010;
+
     border: 1px solid #292929;
+
     border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 22px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+
+    padding: 27px 23px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.22);
 }
 
 .card h2 {
     margin-top: 0;
+    margin-bottom: 18px;
+
     padding-bottom: 12px;
+
     border-bottom: 1px solid #333;
-    font-size: 25px;
+
+    font-size: 24px;
 }
 
-.card p {
-    color: #dedede;
-    font-size: 17px;
+.card p,
+.card li {
+    color: #dddddd;
+    font-size: 16px;
 }
 
 .card ul {
@@ -116,36 +151,42 @@ body {
 }
 
 .card li {
-    margin-bottom: 8px;
+    margin: 7px 0;
+}
+
+/* Contract */
+
+.contract {
+    direction: ltr;
+    text-align: left;
+
+    background: #080808;
+
+    border: 1px solid #333;
+
+    border-radius: 12px;
+
+    padding: 14px;
+
     color: #ddd;
+
+    font-family: monospace;
+
+    word-break: break-all;
 }
 
-/* Persian */
-#persian {
-    direction: rtl;
-    text-align: right;
-}
+/* Risk */
 
-#persian .card h2 {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-#persian .card p,
-#persian .card li {
-    font-size: 17px;
-    line-height: 2.2;
-}
-
-#persian strong {
-    color: #fff;
+.risk {
+    border-color: #444;
+    background: #0d0d0d;
 }
 
 /* English */
+
 #english {
     direction: ltr;
     text-align: left;
-    display: none;
 }
 
 #english .card ul {
@@ -153,44 +194,33 @@ body {
     padding-right: 0;
 }
 
-/* Contract */
-.contract {
-    background: #080808;
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 15px;
-    word-break: break-all;
-    font-family: monospace;
-    color: #ddd;
-    direction: ltr;
-    text-align: left;
-}
-
 /* Footer */
+
 .footer {
     text-align: center;
     color: #777;
-    padding: 30px 10px;
-    font-size: 14px;
+    padding: 25px;
+    font-size: 13px;
 }
 
 /* Mobile */
+
 @media (max-width: 600px) {
 
     .page {
-        padding: 5px 14px 40px;
+        padding: 0 13px 45px;
     }
 
     .hero {
-        padding: 40px 18px;
+        padding: 38px 15px;
     }
 
-    .logo {
-        font-size: 58px;
+    .eagle {
+        font-size: 54px;
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 31px;
     }
 
     .hero p {
@@ -198,5 +228,416 @@ body {
     }
 
     .card {
-        padding: 22px 18px;
-        border
+        padding: 22px 17px;
+        border-radius: 17px;
+    }
+
+    .card h2 {
+        font-size: 21px;
+    }
+
+    .card p,
+    .card li {
+        font-size: 15.5px;
+    }
+
+    .language a {
+        min-width: 125px;
+        font-size: 16px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- LANGUAGE BUTTONS -->
+
+<div class="language">
+
+    <a href="#fa">
+        فارسی
+    </a>
+
+    <a href="#en">
+        English
+    </a>
+
+</div>
+
+
+<!-- LANGUAGE ANCHORS -->
+
+<div id="fa"></div>
+<div id="en"></div>
+
+
+<!-- ========================= -->
+<!-- PERSIAN -->
+<!-- ========================= -->
+
+<section id="persian">
+
+<div class="page">
+
+<header class="hero">
+
+    <div class="eagle">🦅</div>
+
+    <h1>
+        عقاب پیر
+    </h1>
+
+    <p>
+        OEAG — وایت‌پیپر
+    </p>
+
+    <p>
+        توکن جامعه‌محور بر بستر TON
+    </p>
+
+</header>
+
+
+<div class="card">
+
+<h2>
+۱. مقدمه
+</h2>
+
+<p>
+<strong>عقاب پیر (OEAG)</strong>
+یک توکن دیجیتال جامعه‌محور است که بر بستر بلاکچین
+<strong>TON</strong>
+ایجاد شده است.
+</p>
+
+<p>
+هدف پروژه، توسعه تدریجی یک اکوسیستم متصل به دارایی‌های دیجیتال،
+NFTها، فعالیت‌های اجتماعی و کاربردهای آینده Web3 است.
+</p>
+
+<p>
+پروژه عقاب پیر بر پایه عرضه ثابت، شفافیت اطلاعات و توسعه مرحله‌ای
+اکوسیستم طراحی شده است.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+۲. اطلاعات توکن
+</h2>
+
+<ul>
+
+<li>
+<strong>نام:</strong>
+Old Eagle
+</li>
+
+<li>
+<strong>نام فارسی:</strong>
+عقاب پیر
+</li>
+
+<li>
+<strong>نماد:</strong>
+OEAG
+</li>
+
+<li>
+<strong>شبکه:</strong>
+TON
+</li>
+
+<li>
+<strong>نوع:</strong>
+Jetton
+</li>
+
+<li>
+<strong>عرضه کل:</strong>
+1,000,000,000 OEAG
+</li>
+
+<li>
+<strong>اعشار:</strong>
+9
+</li>
+
+<li>
+<strong>مالکیت قرارداد:</strong>
+لغو شده
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+۳. قرارداد رسمی
+</h2>
+
+<p>
+قرارداد رسمی توکن OEAG در شبکه TON:
+</p>
+
+<div class="contract">
+
+EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+۴. عرضه ثابت و مالکیت قرارداد
+</h2>
+
+<p>
+عرضه کل توکن عقاب پیر برابر با
+<strong>1,000,000,000 OEAG</strong>
+است.
+</p>
+
+<p>
+مالکیت قرارداد لغو شده است و عرضه جدیدی از طریق مالک قرارداد ایجاد
+نخواهد شد.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+۵. نقدینگی و معاملات
+</h2>
+
+<p>
+OEAG در اکوسیستم TON و از طریق بازارهای غیرمتمرکز پشتیبان این توکن
+قابل معامله است.
+</p>
+
+<p>
+قیمت بازار می‌تواند تحت تأثیر عرضه و تقاضا، حجم معاملات، نقدینگی
+و شرایط کلی بازار قرار گیرد.
+</p>
+
+<p>
+هیچ قیمت ثابت، سود قطعی یا افزایش قیمت تضمین‌شده‌ای برای OEAG وجود ندارد.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+۶. کاربردهای برنامه‌ریزی‌شده
+</h2>
+
+<ul>
+
+<li>
+توسعه اکوسیستم NFT
+</li>
+
+<li>
+فعالیت‌ها و رویدادهای جامعه
+</li>
+
+<li>
+برنامه‌های مشارکت و پاداش
+</li>
+
+<li>
+خدمات آینده مرتبط با OEAG
+</li>
+
+<li>
+کمپین‌ها و فعالیت‌های اجتماعی
+</li>
+
+<li>
+بررسی همکاری‌های احتمالی در اکوسیستم TON
+</li>
+
+</ul>
+
+<p>
+موارد فوق برنامه‌های توسعه پروژه هستند و اجرای آن‌ها به شرایط و
+پیشرفت آینده پروژه بستگی دارد.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+۷. برنامه NFT
+</h2>
+
+<p>
+یکی از بخش‌های برنامه‌ریزی‌شده اکوسیستم عقاب پیر، توسعه و استفاده
+از NFTها در کنار OEAG است.
+</p>
+
+<p>
+هدف این بخش ایجاد ارتباط میان دارایی‌های دیجیتال، جامعه و
+کاربردهای آینده Web3 است.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+۸. نقشه راه
+</h2>
+
+<ul>
+
+<li>
+<strong>مرحله ۱:</strong>
+ایجاد زیرساخت و راه‌اندازی پروژه
+</li>
+
+<li>
+<strong>مرحله ۲:</strong>
+توسعه جامعه
+</li>
+
+<li>
+<strong>مرحله ۳:</strong>
+توسعه کاربردها
+</li>
+
+<li>
+<strong>مرحله ۴:</strong>
+گسترش اکوسیستم و NFT
+</li>
+
+<li>
+<strong>مرحله ۵:</strong>
+بررسی درخواست‌های لیست شدن در صرافی‌ها
+</li>
+
+<li>
+<strong>مرحله ۶:</strong>
+توسعه بلندمدت پروژه
+</li>
+
+</ul>
+
+<p>
+این نقشه راه مسیر برنامه‌ریزی‌شده پروژه را نشان می‌دهد و به منزله
+تضمین اجرای تمام مراحل نیست.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+۹. شفافیت و اطلاعات رسمی
+</h2>
+
+<p>
+اطلاعات پروژه، قرارداد توکن و تغییرات مهم باید تا حد امکان از طریق
+منابع رسمی پروژه منتشر شوند.
+</p>
+
+<p>
+وب‌سایت پروژه:
+</p>
+
+<div class="contract">
+
+https://aliarefialiarefi69.github.io/old-eagle/
+
+</div>
+
+</div>
+
+
+<div class="card risk">
+
+<h2>
+۱۰. هشدار ریسک و مسئولیت معاملات
+</h2>
+
+<p>
+بازار رمزارزها دارای ریسک و نوسان قابل توجه است و ارزش OEAG ممکن است
+افزایش یا کاهش پیدا کند.
+</p>
+
+<p>
+<strong>
+مسئولیت کامل هرگونه خرید، فروش، انتقال یا معامله OEAG بر عهده
+خود خریدار و معامله‌گر است.
+</strong>
+</p>
+
+<p>
+پروژه Old Eagle هیچ سود، افزایش قیمت، حجم معاملات، تعداد کاربران
+یا لیست شدن در صرافی‌های آینده را تضمین نمی‌کند.
+</p>
+
+<p>
+کاربران باید پیش از هرگونه تصمیم مالی، تحقیقات مستقل خود را انجام
+دهند و تنها با پذیرش کامل ریسک‌های مربوط به بازار اقدام کنند.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+۱۱. اطلاعات رسمی پروژه
+</h2>
+
+<p>
+<strong>
+Old Eagle (OEAG)
+</strong>
+</p>
+
+<p>
+یک پروژه جامعه‌محور بر بستر TON با تمرکز بر توسعه تدریجی اکوسیستم،
+NFT و کاربردهای آینده Web3.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- ENGLISH -->
+<!-- ========================= -->
+
+<section id="english">
+
+<div class="page">
+
+<header class="hero">
+
+    <div class="eagle">🦅</
