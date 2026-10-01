@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>عقاب پیر (OEAG) — وایت‌پیپر</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
 body{
     font-family:Tahoma,Arial,sans-serif;
     color:#fff;
     background:
-      radial-gradient(circle at 0% 0%,rgba(0,229,255,.16),transparent 28%),
-      radial-gradient(circle at 100% 10%,rgba(168,85,247,.18),transparent 30%),
-      #050816;
+        radial-gradient(circle at 0% 0%,rgba(0,229,255,.18),transparent 28%),
+        radial-gradient(circle at 100% 10%,rgba(168,85,247,.20),transparent 30%),
+        #050816;
     line-height:2;
 }
 
-body:before{
+body::before{
     content:"";
     position:fixed;
     inset:0;
     pointer-events:none;
     opacity:.12;
     background-image:
-      linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+        linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
     background-size:45px 45px;
 }
 
@@ -58,6 +65,7 @@ h1{
     font-size:clamp(36px,8vw,60px);
     background:linear-gradient(90deg,#fff,#67e8f9,#c084fc);
     -webkit-background-clip:text;
+    background-clip:text;
     color:transparent;
 }
 
@@ -79,6 +87,7 @@ h1{
     text-decoration:none;
     border:1px solid rgba(255,255,255,.15);
     background:rgba(255,255,255,.06);
+    transition:.3s;
 }
 
 .language a:hover{
@@ -126,6 +135,14 @@ p{
     border-color:rgba(250,204,21,.25);
 }
 
+.contract{
+    word-break:break-all;
+    color:#67e8f9;
+    direction:ltr;
+    text-align:left;
+    margin-top:12px;
+}
+
 footer{
     text-align:center;
     padding:40px 0;
@@ -137,19 +154,31 @@ a{
 }
 
 @media(max-width:600px){
-    section{padding:22px}
-    .info{grid-template-columns:1fr}
+
+    section{
+        padding:22px;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+    }
+
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
+
 <header>
 
-<div class="logo">🦅</div>
+<div class="logo">
+🦅
+</div>
 
 <h1>عقاب پیر</h1>
 
@@ -158,9 +187,19 @@ OEAG — وایت‌پیپر
 </div>
 
 <div class="language">
-<a href="whitepaper.html">English</a>
-<a href="whitepaper-fa.html">فارسی</a>
-<a href="index.html">🏠 صفحه اصلی</a>
+
+<a href="whitepaperEN.html">
+English
+</a>
+
+<a href="whitepaperFA.html">
+فارسی
+</a>
+
+<a href="index.html">
+🏠 صفحه اصلی
+</a>
+
 </div>
 
 </header>
@@ -171,10 +210,10 @@ OEAG — وایت‌پیپر
 <h2>۱. مقدمه</h2>
 
 <p>
-Old Eagle یا عقاب پیر (OEAG) یک توکن دیجیتال جامعه‌محور
-بر بستر بلاکچین TON است. هدف پروژه توسعه یک اکوسیستم
-مرتبط با دارایی‌های دیجیتال، NFT، فعالیت‌های اجتماعی
-و کاربردهای آینده در حوزه Web3 است.
+Old Eagle یا عقاب پیر (OEAG) یک توکن دیجیتال
+جامعه‌محور بر بستر بلاکچین TON است. هدف پروژه توسعه
+یک اکوسیستم مرتبط با دارایی‌های دیجیتال، NFT،
+فعالیت‌های اجتماعی و کاربردهای آینده در حوزه Web3 است.
 </p>
 
 </section>
@@ -186,17 +225,35 @@ Old Eagle یا عقاب پیر (OEAG) یک توکن دیجیتال جامعه‌
 
 <div class="info">
 
-<div><strong>نام:</strong><br>Old Eagle</div>
+<div>
+<strong>نام:</strong><br>
+Old Eagle
+</div>
 
-<div><strong>نماد:</strong><br>OEAG</div>
+<div>
+<strong>نماد:</strong><br>
+OEAG
+</div>
 
-<div><strong>بلاکچین:</strong><br>TON</div>
+<div>
+<strong>بلاکچین:</strong><br>
+TON
+</div>
 
-<div><strong>استاندارد:</strong><br>Jetton</div>
+<div>
+<strong>استاندارد:</strong><br>
+Jetton
+</div>
 
-<div><strong>کل عرضه:</strong><br>1,000,000,000 OEAG</div>
+<div>
+<strong>کل عرضه:</strong><br>
+1,000,000,000 OEAG
+</div>
 
-<div><strong>Decimals:</strong><br>9</div>
+<div>
+<strong>Decimals:</strong><br>
+9
+</div>
 
 </div>
 
@@ -211,15 +268,20 @@ Old Eagle یا عقاب پیر (OEAG) یک توکن دیجیتال جامعه‌
 آدرس قرارداد رسمی OEAG:
 </p>
 
-<p style="margin-top:12px;word-break:break-all;color:#67e8f9;direction:ltr;text-align:left">
+<p class="contract">
 EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
 </p>
 
 <p style="margin-top:15px">
-<a href="https://tonviewer.com/EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M"
+
+<a
+href="https://tonviewer.com/EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M"
 target="_blank">
+
 مشاهده قرارداد در Tonviewer ←
+
 </a>
+
 </p>
 
 </section>
@@ -349,10 +411,12 @@ NFTها بخش مهمی از برنامه اکوسیستم Old Eagle هستند.
 </p>
 
 <p style="margin-top:15px">
+
 <strong>
 مسئولیت کامل هرگونه خرید، فروش، انتقال، سواپ یا معامله
 OEAG بر عهده خود خریدار یا معامله‌گر است.
 </strong>
+
 </p>
 
 </section>
@@ -370,7 +434,7 @@ OEAG بر عهده خود خریدار یا معامله‌گر است.
 شبکه: TON
 </p>
 
-<p style="direction:ltr;text-align:left">
+<p class="contract">
 Contract:
 EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
 </p>
@@ -379,10 +443,19 @@ EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
 
 
 <footer>
-Old Eagle (OEAG)<br>
-Built on TON<br><br>
+
+Old Eagle (OEAG)
+
+<br>
+
+Built on TON
+
+<br><br>
+
 © 2026 Old Eagle
+
 </footer>
+
 
 </div>
 
