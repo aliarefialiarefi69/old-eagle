@@ -6,4 +6,452 @@
 <title>Old Eagle (OEAG)</title>
 
 <style>
-*{box-sizing:border
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#fff;
+    background:
+      radial-gradient(circle at 10% 10%,rgba(0,229,255,.18),transparent 30%),
+      radial-gradient(circle at 90% 20%,rgba(168,85,247,.20),transparent 30%),
+      radial-gradient(circle at 50% 100%,rgba(250,204,21,.12),transparent 35%),
+      #050816;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.15;
+    background-image:
+      linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+    background-size:45px 45px;
+}
+
+.container{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+nav{
+    padding:22px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-small{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-size:27px;
+    background:linear-gradient(135deg,#00e5ff,#8b5cf6);
+    box-shadow:0 0 30px rgba(0,229,255,.4);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:bold;
+    font-size:20px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    opacity:.85;
+}
+
+nav a:hover{color:#00e5ff}
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero-content{
+    max-width:850px;
+    animation:fadeUp 1s ease;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 17px;
+    border:1px solid rgba(0,229,255,.35);
+    border-radius:50px;
+    background:rgba(0,229,255,.08);
+    color:#67e8f9;
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:clamp(52px,10vw,105px);
+    line-height:.95;
+    background:linear-gradient(90deg,#fff,#67e8f9,#c084fc,#fde047);
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:25px;
+}
+
+.hero p{
+    color:#cbd5e1;
+    font-size:19px;
+    line-height:1.8;
+    max-width:700px;
+    margin:auto;
+}
+
+.buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 25px;
+    border-radius:14px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#00c6ff,#7c3aed);
+    box-shadow:0 0 30px rgba(0,198,255,.25);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.06);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+}
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:45px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.card{
+    padding:28px;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:22px;
+    background:rgba(255,255,255,.055);
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(0,229,255,.35);
+}
+
+.card-icon{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#aeb9ca;
+    line-height:1.7;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-size:30px;
+    color:#67e8f9;
+    margin-bottom:8px;
+}
+
+.roadmap{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.phase{
+    position:relative;
+}
+
+.phase span{
+    color:#facc15;
+    font-size:13px;
+    font-weight:bold;
+}
+
+footer{
+    padding:45px 0;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#94a3b8;
+}
+
+footer strong{
+    color:#67e8f9;
+}
+
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(25px)}
+    to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:800px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .roadmap{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:550px){
+    nav .links{display:none}
+    .grid,.roadmap{grid-template-columns:1fr}
+    .hero{min-height:580px}
+    .section{padding:60px 0}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+    <div class="brand">
+        <div class="logo-small">🦅</div>
+        <span>OLD EAGLE</span>
+    </div>
+
+    <div class="links">
+        <a href="#about">About</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="whitepaper.html">Whitepaper</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="badge">⚡ Built on TON</div>
+
+        <h1>OLD EAGLE</h1>
+
+        <p>
+            Old Eagle (OEAG) is a community-driven digital token
+            built on the TON blockchain, focused on community,
+            digital assets, NFTs and future Web3 development.
+        </p>
+
+        <div class="buttons">
+            <a class="btn btn-primary" href="whitepaper.html">
+                📄 Read Whitepaper
+            </a>
+
+            <a class="btn btn-secondary"
+               href="https://tonviewer.com/EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M"
+               target="_blank">
+                🔗 View Contract
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="about">
+
+<h2 class="section-title">OEAG in Numbers</h2>
+
+<div class="grid">
+
+<div class="card stat">
+<strong>1B</strong>
+Total Supply
+</div>
+
+<div class="card stat">
+<strong>9</strong>
+Decimals
+</div>
+
+<div class="card stat">
+<strong>TON</strong>
+Blockchain
+</div>
+
+<div class="card stat">
+<strong>JETTON</strong>
+Token Standard
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="ecosystem">
+
+<h2 class="section-title">The Old Eagle Ecosystem</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-icon">🦅</div>
+<h3>OEAG Token</h3>
+<p>
+The core digital asset of the Old Eagle ecosystem,
+built on the TON blockchain.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🎨</div>
+<h3>NFT Ecosystem</h3>
+<p>
+Future plans include connecting OEAG with digital
+collectibles and NFT-related activities.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">👥</div>
+<h3>Community</h3>
+<p>
+Community participation and future activities are
+an important part of the project's development.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🚀</div>
+<h3>Future Utility</h3>
+<p>
+Future services, campaigns, events and Web3 ideas
+may be developed around the ecosystem.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="roadmap">
+
+<h2 class="section-title">Roadmap</h2>
+
+<div class="roadmap">
+
+<div class="card phase">
+<span>PHASE 01</span>
+<h3>Foundation</h3>
+<p>Token creation, website and project infrastructure.</p>
+</div>
+
+<div class="card phase">
+<span>PHASE 02</span>
+<h3>Community</h3>
+<p>Community growth, communication and social activities.</p>
+</div>
+
+<div class="card phase">
+<span>PHASE 03</span>
+<h3>Utility</h3>
+<p>Explore practical uses and ecosystem activities.</p>
+</div>
+
+<div class="card phase">
+<span>PHASE 04</span>
+<h3>Ecosystem</h3>
+<p>NFT and future Web3 ecosystem development.</p>
+</div>
+
+<div class="card phase">
+<span>PHASE 05</span>
+<h3>Exchange Applications</h3>
+<p>Potential applications to additional trading platforms.</p>
+</div>
+
+<div class="card phase">
+<span>PHASE 06</span>
+<h3>Long-Term Development</h3>
+<p>Continued development based on community and ecosystem needs.</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+
+<div class="card" style="text-align:center">
+
+<h2>Transparency & Responsibility</h2>
+
+<p style="margin-top:18px;line-height:1.8;color:#aeb9ca">
+Old Eagle provides public project information and its official
+contract address. Digital assets are volatile and there is no
+guarantee of price appreciation, liquidity, adoption or exchange listing.
+</p>
+
+<div class="buttons">
+<a class="btn btn-primary" href="whitepaper.html">
+Read Full Whitepaper
+</a>
+
+<a class="btn btn-secondary" href="whitepaper-fa.html">
+نسخه فارسی
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+<strong>OLD EAGLE (OEAG)</strong>
+<br><br>
+Built on TON • Community • NFTs • Future Web3
+<br><br>
+© 2026 Old Eagle
+</footer>
+
+</div>
+
+</body>
+</html>
