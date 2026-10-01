@@ -6,446 +6,68 @@
 
 <title>Old Eagle (OEAG)</title>
 
+<meta name="description" content="Old Eagle (OEAG) - A community-driven project built on the TON blockchain.">
+<meta name="theme-color" content="#06101c">
+
 <style>
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-font-family:Arial,sans-serif;
-background:
-radial-gradient(circle at 15% 10%,#123b61,transparent 35%),
-radial-gradient(circle at 85% 20%,#48145f,transparent 35%),
-linear-gradient(135deg,#02040a,#080d1b,#030303);
-color:white;
-min-height:100vh;
+html {
+    scroll-behavior: smooth;
 }
 
-.container{
-width:92%;
-max-width:1100px;
-margin:auto;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(0,225,255,.20), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(130,50,255,.20), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(255,200,0,.10), transparent 35%),
+        #050914;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 0;
-gap:20px;
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.nav-logo{
-width:65px;
-height:65px;
-object-fit:contain;
-border-radius:50%;
-box-shadow:0 0 30px rgba(0,220,255,.3);
+header {
+    padding: 22px 0;
 }
 
-.nav-buttons{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-justify-content:flex-end;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
-.button{
-display:inline-block;
-padding:13px 22px;
-border-radius:30px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.18);
-transition:.3s;
+.brand {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 
-.button:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(0,220,255,.2);
+.brand span {
+    color: #00e5ff;
 }
 
-.buy{
-background:linear-gradient(90deg,#00d9ff,#006eff);
-border:none;
-box-shadow:0 0 25px rgba(0,217,255,.3);
+.lang {
+    display: flex;
+    gap: 8px;
 }
 
-.gold{
-background:linear-gradient(90deg,#ffb300,#ff6500);
-border:none;
-}
-
-.hero{
-text-align:center;
-padding:45px 0 80px;
-}
-
-.hero-logo{
-width:min(500px,90vw);
-height:min(500px,90vw);
-object-fit:contain;
-display:block;
-margin:0 auto 25px;
-filter:
-drop-shadow(0 0 25px rgba(255,255,255,.3))
-drop-shadow(0 0 60px rgba(0,220,255,.2));
-animation:float 5s ease-in-out infinite;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
-}
-
-.hero h1{
-font-size:clamp(45px,8vw,80px);
-letter-spacing:3px;
-background:linear-gradient(90deg,#fff,#6eeaff,#fff);
--webkit-background-clip:text;
-color:transparent;
-margin-bottom:15px;
-}
-
-.hero p{
-max-width:750px;
-margin:auto;
-font-size:19px;
-line-height:1.7;
-color:#b8c4d8;
-}
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.hero-buttons .button{
-font-size:17px;
-min-width:175px;
-}
-
-.section{
-margin:25px 0;
-padding:35px;
-border-radius:25px;
-background:rgba(255,255,255,.055);
-border:1px solid rgba(255,255,255,.12);
-backdrop-filter:blur(15px);
-}
-
-.section h2{
-font-size:30px;
-margin-bottom:22px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:18px;
-}
-
-.card{
-padding:25px;
-border-radius:20px;
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.1);
-}
-
-.card h3{
-color:#75eaff;
-margin-bottom:10px;
-}
-
-.card p{
-color:#b7c1d2;
-line-height:1.6;
-}
-
-.contract{
-margin-top:20px;
-word-break:break-all;
-color:#6eeaff;
-font-size:14px;
-}
-
-footer{
-text-align:center;
-padding:50px 0 30px;
-color:#718096;
-}
-
-@media(max-width:600px){
-
-nav{
-align-items:flex-start;
-}
-
-.nav-logo{
-width:52px;
-height:52px;
-}
-
-.nav-buttons{
-gap:6px;
-}
-
-.button{
-padding:10px 14px;
-font-size:13px;
-}
-
-.hero{
-padding-top:30px;
-}
-
-.hero-logo{
-width:330px;
-height:330px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-.section{
-padding:23px;
-}
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<nav>
-
-<img src="logo.png" class="nav-logo" alt="Old Eagle">
-
-<div class="nav-buttons">
-
-<a class="button buy"
-href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
-target="_blank">
-🛒 Buy OEAG
-</a>
-
-<a class="button"
-href="whitepaperEN.html?v=3">
-Whitepaper
-</a>
-
-<a class="button gold"
-href="whitepaperFA.html?v=3">
-فارسی
-</a>
-
-</div>
-
-</nav>
-
-
-<section class="hero">
-
-<img src="logo.png" class="hero-logo" alt="Old Eagle">
-
-<h1>OLD EAGLE</h1>
-
-<p>
-Old Eagle (OEAG) is a community-driven token built on the TON blockchain,
-focused on community, NFTs and future Web3 utilities.
-</p>
-
-<div class="hero-buttons">
-
-<a class="button buy"
-href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
-target="_blank">
-🛒 BUY OEAG
-</a>
-
-<a class="button"
-href="whitepaperEN.html?v=3">
-📄 WHITEPAPER
-</a>
-
-<a class="button gold"
-href="whitepaperFA.html?v=3">
-🇮🇷 فارسی
-</a>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>🦅 Old Eagle Ecosystem</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>OEAG Token</h3>
-<p>
-Old Eagle is a TON-based Jetton with a fixed total supply.
-</p>
-</div>
-
-<div class="card">
-<h3>NFT Ecosystem</h3>
-<p>
-Future plans include NFT activities and community experiences.
-</p>
-</div>
-
-<div class="card">
-<h3>Community</h3>
-<p>
-Community participation, campaigns, activities and future rewards.
-</p>
-</div>
-
-<div class="card">
-<h3>Future Web3</h3>
-<p>
-The project aims to gradually expand toward broader Web3 utilities.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>📊 Token Information</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Name</h3>
-<p>Old Eagle</p>
-</div>
-
-<div class="card">
-<h3>Symbol</h3>
-<p>OEAG</p>
-</div>
-
-<div class="card">
-<h3>Network</h3>
-<p>TON Blockchain</p>
-</div>
-
-<div class="card">
-<h3>Total Supply</h3>
-<p>1,000,000,000 OEAG</p>
-</div>
-
-</div>
-
-<p class="contract">
-Contract:<br>
-EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M
-</p>
-
-</section>
-
-
-<section class="section">
-
-<h2>🚀 Roadmap</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Phase 1</h3>
-<p>Foundation</p>
-</div>
-
-<div class="card">
-<h3>Phase 2</h3>
-<p>Community</p>
-</div>
-
-<div class="card">
-<h3>Phase 3</h3>
-<p>Utility</p>
-</div>
-
-<div class="card">
-<h3>Phase 4</h3>
-<p>Ecosystem</p>
-</div>
-
-<div class="card">
-<h3>Phase 5</h3>
-<p>Exchange Applications</p>
-</div>
-
-<div class="card">
-<h3>Phase 6</h3>
-<p>Long-Term Development</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>⚠️ Risk Disclosure</h2>
-
-<p style="color:#b7c1d2;line-height:1.8;">
-OEAG is a digital asset and its market value may be volatile.
-There is no guarantee of price appreciation, future exchange listings,
-adoption, liquidity or any particular level of demand.
-<br><br>
-Any purchase, sale, transfer or trade of OEAG is made at the individual's
-own responsibility. Users should conduct their own research and understand
-the risks before interacting with digital assets.
-</p>
-
-</section>
-
-
-<section class="section" style="text-align:center;">
-
-<h2>🛒 Get OEAG</h2>
-
-<p style="color:#b7c1d2;line-height:1.7;margin-bottom:25px;">
-Trade OEAG through STON.fi on the TON blockchain.
-</p>
-
-<a class="button buy"
-style="font-size:19px;padding:16px 35px;"
-href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
-target="_blank">
-🛒 BUY OLD EAGLE (OEAG)
-</a>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 Old Eagle (OEAG)</p>
-<p>Built on TON • Community Driven • Web3</p>
-
-</footer>
-
-</div>
-
-</body>
-</html>
+.lang a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 14px;
+    border-radius: 30px;
+    background: rgba(255,255,255,.06);
+    border: 
