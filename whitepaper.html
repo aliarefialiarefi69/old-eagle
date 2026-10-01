@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -19,31 +23,54 @@ body {
     line-height: 1.8;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
+/* LANGUAGE BUTTONS */
 
-.logo-box {
+.language {
     text-align: center;
-    padding: 30px 0 10px;
+    padding: 25px 10px;
+    background: #050505;
 }
 
-.logo-box img {
+.language a {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 5px;
+    border: 1px solid #444;
+    border-radius: 12px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.language a:hover {
+    background: #222;
+}
+
+/* LOGO */
+
+.logo {
+    text-align: center;
+    padding: 25px 10px 5px;
+}
+
+.logo img {
     width: 180px;
     height: 180px;
     object-fit: contain;
     border-radius: 50%;
 }
 
+/* HEADER */
+
 .header {
-    background: #111;
+    max-width: 900px;
+    margin: 10px auto 0;
+    background: #111827;
     color: white;
-    padding: 35px 20px;
+    padding: 45px 25px;
     text-align: center;
-    border-radius: 20px;
-    margin-top: 15px;
+    border-radius: 0 0 20px 20px;
 }
 
 .header h1 {
@@ -53,28 +80,16 @@ body {
 
 .header p {
     font-size: 18px;
-    margin: 8px 0;
-    color: #ccc;
+    margin: 10px 0;
+    color: #ddd;
 }
 
-.language-buttons {
-    text-align: center;
-    margin: 25px 0;
-}
+/* CONTENT */
 
-.language-buttons button {
-    border: 1px solid #444;
-    padding: 12px 28px;
-    margin: 5px;
-    border-radius: 10px;
-    background: #111;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.language-buttons button:hover {
-    background: #222;
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
 }
 
 .card {
@@ -123,11 +138,6 @@ th {
 
 a {
     color: #70a7ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .warning {
@@ -145,9 +155,23 @@ a:hover {
     font-size: 14px;
 }
 
-.hidden {
+/* HIDE LANGUAGE SECTIONS */
+
+#fa {
     display: none;
 }
+
+/* SHOW PERSIAN WHEN #fa IS SELECTED */
+
+#fa:target {
+    display: block;
+}
+
+#fa:target ~ #en {
+    display: none;
+}
+
+/* RTL */
 
 .rtl {
     direction: rtl;
@@ -175,105 +199,123 @@ a:hover {
 
 <!-- LOGO -->
 
-<div class="logo-box">
+<div class="logo">
     <img
         src="https://raw.githubusercontent.com/aliarefialiarefi69/old-eagle-logo/main/logo.png"
         alt="Old Eagle Logo"
+        onerror="this.style.display='none';"
     >
 </div>
 
 
 <!-- LANGUAGE BUTTONS -->
 
-<div class="language-buttons">
-    <button onclick="showPersian()">فارسی</button>
-    <button onclick="showEnglish()">English</button>
+<div class="language">
+
+    <a href="#fa">فارسی</a>
+
+    <a href="#en">English</a>
+
 </div>
 
 
 <!-- ================================================= -->
-<!-- ENGLISH VERSION -->
+<!-- PERSIAN VERSION -->
 <!-- ================================================= -->
 
-<div id="english">
+<div id="fa" class="rtl">
 
 <div class="header">
-    <h1>🦅 Old Eagle</h1>
-    <p>OEAG — Whitepaper 1.0</p>
-    <p>Community-Driven Token on TON</p>
+
+<h1>🦅 عقاب پیر</h1>
+
+<p>OEAG — وایت‌پیپر ۱.۰</p>
+
+<p>توکن جامعه‌محور بر بستر TON</p>
+
 </div>
+
 
 <div class="container">
 
 <div class="card">
-<h2>1. Introduction</h2>
+
+<h2>۱. مقدمه</h2>
 
 <p>
-Old Eagle (OEAG) is a community-driven digital token built on the TON blockchain.
-The project aims to develop an ecosystem connecting digital assets, NFTs,
-community activities and future Web3 applications.
+عقاب پیر (OEAG) یک توکن دیجیتال جامعه‌محور است که بر بستر بلاکچین TON ایجاد شده است.
 </p>
 
 <p>
-Old Eagle is designed around a fixed total supply, transparent on-chain information
-and gradual ecosystem development.
+هدف پروژه توسعه یک اکوسیستم متصل به دارایی‌های دیجیتال، NFTها،
+فعالیت‌های جامعه و کاربردهای آینده Web3 است.
 </p>
+
+<p>
+عقاب پیر بر پایه عرضه کل ثابت، اطلاعات شفاف روی زنجیره
+و توسعه تدریجی اکوسیستم طراحی شده است.
+</p>
+
 </div>
 
 
 <div class="card">
-<h2>2. Token Information</h2>
+
+<h2>۲. اطلاعات توکن</h2>
 
 <table>
+
 <tr>
-<th>Item</th>
-<th>Details</th>
+<th>مورد</th>
+<th>جزئیات</th>
 </tr>
 
 <tr>
-<td>Name</td>
+<td>نام</td>
 <td>Old Eagle</td>
 </tr>
 
 <tr>
-<td>Symbol</td>
+<td>نماد</td>
 <td>OEAG</td>
 </tr>
 
 <tr>
-<td>Blockchain</td>
+<td>بلاکچین</td>
 <td>TON</td>
 </tr>
 
 <tr>
-<td>Token Standard</td>
+<td>استاندارد توکن</td>
 <td>Jetton</td>
 </tr>
 
 <tr>
-<td>Total Supply</td>
+<td>کل عرضه</td>
 <td>1,000,000,000 OEAG</td>
 </tr>
 
 <tr>
-<td>Decimals</td>
+<td>تعداد اعشار</td>
 <td>9</td>
 </tr>
 
 <tr>
-<td>Ownership</td>
-<td>Revoked</td>
+<td>مالکیت</td>
+<td>لغو شده</td>
 </tr>
 
 </table>
+
 </div>
 
 
 <div class="card">
-<h2>3. Official Contract</h2>
+
+<h2>۳. قرارداد رسمی</h2>
 
 <p>
-The official Old Eagle Jetton Master contract is:
+آدرس رسمی قرارداد Jetton Master مربوط به Old Eagle:
 </p>
 
 <div class="contract">
@@ -281,124 +323,50 @@ EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
 </div>
 
 <p>
-Users should independently verify the contract before interacting with OEAG.
+کاربران باید قبل از هرگونه تعامل با OEAG، آدرس قرارداد را به صورت مستقل بررسی کنند.
 </p>
+
 </div>
 
 
 <div class="card">
-<h2>4. Fixed Supply & Ownership</h2>
+
+<h2>۴. عرضه ثابت و مالکیت</h2>
 
 <p>
-The total supply of Old Eagle is 1 billion OEAG.
+عرضه کل Old Eagle برابر با ۱ میلیارد OEAG است.
 </p>
 
 <p>
-Ownership and administrative control have been revoked.
-This information is intended to make the token's administrative status
-transparent to the community.
+مالکیت و کنترل مدیریتی توکن لغو شده است.
+این موضوع با هدف شفافیت وضعیت مدیریتی توکن برای جامعه اعلام شده است.
 </p>
+
 </div>
 
 
 <div class="card">
-<h2>5. Liquidity & Trading</h2>
+
+<h2>۵. نقدینگی و معاملات</h2>
 
 <p>
-OEAG has an initial liquidity pool on STON.fi.
+برای OEAG یک استخر نقدینگی اولیه در STON.fi ایجاد شده است.
 </p>
 
 <p>
-The initial pool was created with:
+استخر اولیه با موارد زیر ایجاد شد:
 </p>
 
 <ul>
+
 <li>1 TON / Gram</li>
+
 <li>10,000,000 OEAG</li>
+
 </ul>
 
 <p>
-Because the initial liquidity is limited, trades may experience significant
-price impact. The market price is determined by trading activity and available
-liquidity. No fixed or guaranteed price is promised.
-</p>
-
-<p>
-<a
-href="https://app.ston.fi/swap?ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M"
-target="_blank">
-Trade OEAG on STON.fi
-</a>
-</p>
-</div>
-
-
-<div class="card">
-<h2>6. Planned Utility</h2>
-
-<p>
-The following are planned ecosystem directions and are not claims of
-currently available functionality:
-</p>
-
-<ul>
-<li>Old Eagle NFT ecosystem</li>
-<li>NFT-related community activities</li>
-<li>Community rewards</li>
-<li>Future OEAG-based services</li>
-<li>Community campaigns and events</li>
-<li>Potential partnerships within the TON ecosystem</li>
-</ul>
-
-<p>
-Future utilities will be announced publicly when they become operational.
-</p>
-</div>
-
-
-<div class="card">
-<h2>7. NFT Ecosystem</h2>
-
-<p>
-One of the planned directions for Old Eagle is integration with the NFT ecosystem.
-</p>
-
-<ul>
-<li>Old Eagle themed NFTs</li>
-<li>Limited digital collectibles</li>
-<li>Community NFT events</li>
-<li>NFT-related activities involving OEAG</li>
-<li>Custom NFT projects</li>
-</ul>
-</div>
-
-
-<div class="card">
-<h2>8. Roadmap</h2>
-
-<h3>Phase 1 — Foundation</h3>
-
-<ul>
-<li>Create Old Eagle Jetton</li>
-<li>Establish fixed supply</li>
-<li>Revoke ownership</li>
-<li>Establish initial liquidity</li>
-<li>Launch official website</li>
-<li>Submit OEAG for wallet ecosystem review</li>
-</ul>
-
-
-<h3>Phase 2 — Community</h3>
-
-<ul>
-<li>Build social media presence</li>
-<li>Publish educational content</li>
-<li>Introduce the Old Eagle brand</li>
-<li>Grow the community</li>
-</ul>
-
-
-<h3>Phase 3 — Utility</h3>
-
-<ul>
-<li>Develop NFT-related applications</li
+به دلیل محدود بودن نقدینگی اولیه، معاملات ممکن است با تأثیر قابل توجه
+بر قیمت همراه باشند.
+قیمت بازار بر اساس فعالیت معاملاتی و نقدینگی موجود تعیین می‌شود.
+هیچ قیمت ثابت یا تضمین‌شده‌ای وجود ندارد
