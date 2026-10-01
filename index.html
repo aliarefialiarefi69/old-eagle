@@ -22,8 +22,14 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
-    background: #050914;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(0,225,255,.18), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(130,50,255,.18), transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(255,200,0,.08), transparent 35%),
+        #050914;
+    min-height: 100vh;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -34,7 +40,7 @@ body {
 
 header {
     padding: 20px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .nav {
@@ -47,6 +53,7 @@ header {
 .brand {
     font-size: 22px;
     font-weight: 900;
+    letter-spacing: 1px;
 }
 
 .brand span {
@@ -61,10 +68,10 @@ header {
 .lang a {
     color: #ffffff;
     text-decoration: none;
-    padding: 8px 13px;
-    border-radius: 20px;
-    background: #111827;
-    border: 1px solid #263244;
+    padding: 9px 14px;
+    border-radius: 30px;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.15);
     font-size: 14px;
 }
 
@@ -79,7 +86,7 @@ header {
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #00e5ff;
-    box-shadow: 0 0 45px rgba(0,229,255,0.25);
+    box-shadow: 0 0 45px rgba(0,229,255,.28);
     margin-bottom: 25px;
     background: #000000;
 }
@@ -116,10 +123,18 @@ h1 {
     background: #111827;
 }
 
+.btn:hover {
+    background: #1b2638;
+}
+
 .btn.primary {
     background: #00b8d4;
     border-color: #00e5ff;
     color: #001014;
+}
+
+.btn.primary:hover {
+    background: #00e5ff;
 }
 
 section {
@@ -127,7 +142,7 @@ section {
 }
 
 .card {
-    background: #0b1220;
+    background: rgba(11,18,32,.88);
     border: 1px solid #1d2a3d;
     border-radius: 18px;
     padding: 28px;
@@ -156,7 +171,7 @@ p {
 
 .stat {
     text-align: center;
-    background: #0b1220;
+    background: rgba(11,18,32,.88);
     border: 1px solid #1d2a3d;
     border-radius: 16px;
     padding: 25px 15px;
@@ -164,289 +179,4 @@ p {
 
 .stat strong {
     display: block;
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.contract {
-    word-break: break-all;
-    font-family: monospace;
-    background: #050914;
-    border: 1px solid #1d2a3d;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 12px;
-    color: #8defff;
-}
-
-footer {
-    text-align: center;
-    padding: 35px 0;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    color: #778398;
-}
-
-@media (max-width: 700px) {
-    .stats,
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .logo {
-        width: 180px;
-        height: 180px;
-    }
-
-    .hero {
-        padding-top: 45px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <div class="container nav">
-        <div class="brand">
-            Old Eagle <span>OEAG</span>
-        </div>
-
-        <div class="lang">
-            <a href="whitepaperEN.html">English</a>
-            <a href="whitepaperFA.html">فارسی</a>
-        </div>
-    </div>
-</header>
-
-<main>
-
-<section class="hero">
-    <div class="container">
-
-        <img
-            class="logo"
-            src="1000022248-1.png"
-            alt="Old Eagle Logo"
-        >
-
-        <h1>Old Eagle</h1>
-
-        <p class="subtitle">
-            OEAG is a community-driven digital asset built on the TON blockchain,
-            focused on community, NFTs and future Web3 development.
-        </p>
-
-        <div class="buttons">
-            <a
-                class="btn primary"
-                href="https://app.ston.fi/swap"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Buy OEAG
-            </a>
-
-            <a class="btn" href="whitepaperEN.html">
-                Whitepaper
-            </a>
-
-            <a class="btn" href="whitepaperFA.html">
-                فارسی
-            </a>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <div class="container">
-
-        <div class="stats">
-
-            <div class="stat">
-                <strong>OEAG</strong>
-                Token
-            </div>
-
-            <div class="stat">
-                <strong>TON</strong>
-                Network
-            </div>
-
-            <div class="stat">
-                <strong>1B</strong>
-                Total Supply
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <div class="container">
-
-        <div class="card">
-            <h2>About Old Eagle</h2>
-
-            <p>
-                Old Eagle (OEAG) is a community-driven project built on the
-                TON blockchain. The project aims to develop an ecosystem around
-                digital assets, NFTs, community activities and future Web3 utilities.
-            </p>
-        </div>
-
-        <div class="grid">
-
-            <div class="card">
-                <h3>Community</h3>
-                <p>
-                    Building an active community around OEAG through events,
-                    campaigns and future community initiatives.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>NFT Ecosystem</h3>
-                <p>
-                    Exploring NFT-related experiences and future connections
-                    between OEAG and digital collectibles.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Future Utility</h3>
-                <p>
-                    Future utilities and ecosystem features may be developed
-                    as the project grows.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>TON Blockchain</h3>
-                <p>
-                    OEAG is built as a Jetton on The Open Network (TON).
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <div class="container">
-
-        <div class="card">
-            <h2>Roadmap</h2>
-
-            <h3>Phase 1 — Foundation</h3>
-            <p>
-                Token creation, website development and project foundation.
-            </p>
-
-            <br>
-
-            <h3>Phase 2 — Community</h3>
-            <p>
-                Community growth, social channels and community activities.
-            </p>
-
-            <br>
-
-            <h3>Phase 3 — Utility</h3>
-            <p>
-                Development of planned utilities and ecosystem features.
-            </p>
-
-            <br>
-
-            <h3>Phase 4 — Ecosystem</h3>
-            <p>
-                Expansion of NFT and Web3-related experiences.
-            </p>
-
-            <br>
-
-            <h3>Phase 5 — Exchange Applications</h3>
-            <p>
-                Exploring potential applications and opportunities for broader
-                market access.
-            </p>
-
-            <br>
-
-            <h3>Phase 6 — Long-Term Development</h3>
-            <p>
-                Continued development based on community participation,
-                resources and project progress.
-            </p>
-
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <div class="container">
-
-        <div class="card">
-
-            <h2>Official Contract</h2>
-
-            <p>
-                Old Eagle (OEAG) official Jetton contract:
-            </p>
-
-            <div class="contract">
-                EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <div class="container">
-
-        <div class="card">
-
-            <h2>Important Notice</h2>
-
-            <p>
-                OEAG is a digital asset and its market value may change.
-                There is no guarantee of price appreciation, future exchange
-                listings, adoption or profitability.
-            </p>
-
-            <br>
-
-            <p>
-                Any purchase, sale, transfer or trading activity involving
-                OEAG is the sole responsibility of the buyer or trader.
-            </p>
-
-        </div>
-
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <div class="container">
-        Old Eagle (OEAG) — Built on TON
-    </div>
-</footer>
-
-</body>
-</html>
+   
