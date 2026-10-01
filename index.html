@@ -1,28 +1,286 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Old Eagle (OEAG)</title>
+
 <style>
-body{margin:0;background:#050914;color:white;font-family:Arial;text-align:center;padding:60px 20px}
-h1{font-size:42px}
-p{color:#b9c4d3}
-a{display:inline-block;margin:8px;padding:14px 22px;border-radius:30px;text-decoration:none;background:#111827;color:white}
-.buy{background:#00b8d4;color:#001014}
-.box{max-width:700px;margin:auto;padding:30px;border:1px solid #334155;border-radius:18px}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#050914;
+color:white;
+min-height:100vh;
+line-height:1.6;
+}
+
+.container{
+width:92%;
+max-width:1000px;
+margin:auto;
+}
+
+header{
+padding:20px 0;
+border-bottom:1px solid #1d2a3d;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+}
+
+.brand{
+font-size:22px;
+font-weight:bold;
+}
+
+.brand span{
+color:#00e5ff;
+}
+
+.lang a{
+display:inline-block;
+color:white;
+text-decoration:none;
+padding:8px 14px;
+margin-left:5px;
+border-radius:25px;
+background:#111827;
+border:1px solid #263244;
+font-size:14px;
+}
+
+.hero{
+text-align:center;
+padding:60px 0;
+}
+
+.logo{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:50%;
+border:3px solid #00e5ff;
+margin-bottom:25px;
+background:#000;
+}
+
+h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.subtitle{
+color:#b9c4d3;
+font-size:18px;
+max-width:700px;
+margin:auto;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:13px 22px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+background:#111827;
+border:1px solid #263244;
+}
+
+.btn.primary{
+background:#00b8d4;
+color:#001014;
+border-color:#00e5ff;
+}
+
+.card{
+background:#0b1220;
+border:1px solid #1d2a3d;
+border-radius:18px;
+padding:28px;
+margin-bottom:20px;
+}
+
+h2{
+font-size:30px;
+margin-bottom:18px;
+}
+
+p{
+color:#b9c4d3;
+margin-bottom:10px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.stat{
+text-align:center;
+background:#0b1220;
+border:1px solid #1d2a3d;
+border-radius:16px;
+padding:25px 15px;
+}
+
+.stat strong{
+display:block;
+font-size:20px;
+color:#00e5ff;
+}
+
+.stat span{
+color:#b9c4d3;
+font-size:14px;
+}
+
+footer{
+text-align:center;
+padding:40px 0;
+color:#718096;
+}
+
+@media(max-width:600px){
+h1{
+font-size:38px;
+}
+
+.logo{
+width:170px;
+height:170px;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.nav{
+flex-direction:column;
+}
+}
 </style>
 </head>
+
 <body>
-<div class="box">
-<h1>Old Eagle (OEAG)</h1>
-<p>A community-driven project built on the TON blockchain.</p>
-<p><b>Token:</b> OEAG</p>
-<p><b>Network:</b> TON</p>
-<p><b>Total Supply:</b> 1,000,000,000 OEAG</p>
-<a class="buy" href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M">Buy OEAG</a>
-<a href="whitepaperEN.html">English Whitepaper</a>
-<a href="whitepaperFA.html">نسخه فارسی</a>
+
+<header>
+<div class="container nav">
+
+<div class="brand">
+Old Eagle <span>(OEAG)</span>
 </div>
+
+<div class="lang">
+<a href="whitepaperEN.html">English</a>
+<a href="whitepaperFA.html">فارسی</a>
+</div>
+
+</div>
+</header>
+
+<main class="container">
+
+<section class="hero">
+
+<img class="logo" src="1000022248-1.png" alt="Old Eagle Logo">
+
+<h1>Old Eagle (OEAG)</h1>
+
+<p class="subtitle">
+A community-driven project built on the TON blockchain.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary"
+href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M">
+Buy OEAG
+</a>
+
+<a class="btn" href="whitepaperEN.html">
+Whitepaper
+</a>
+
+<a class="btn" href="whitepaperFA.html">
+نسخه فارسی
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>About Old Eagle</h2>
+
+<p>
+Old Eagle (OEAG) is a community-driven token built on the TON blockchain.
+</p>
+
+<p>
+The project focuses on community activity, digital assets, NFTs and future Web3 utilities.
+</p>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>OEAG</strong>
+<span>Token</span>
+</div>
+
+<div class="stat">
+<strong>TON</strong>
+<span>Network</span>
+</div>
+
+<div class="stat">
+<strong>1B</strong>
+<span>Total Supply</span>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Official Contract</h2>
+
+<p>
+EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+Old Eagle (OEAG) — Built on TON
+</footer>
+
 </body>
 </html>
