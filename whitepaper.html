@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,356 +17,186 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
     background: #050505;
-    color: #ffffff;
-    line-height: 1.8;
+    color: #f5f5f5;
+    font-family: Tahoma, Arial, sans-serif;
+    line-height: 2;
 }
 
-/* LANGUAGE BUTTONS */
-
-.language {
-    text-align: center;
-    padding: 25px 10px;
-    background: #050505;
+/* Language Buttons */
+.language-switch {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 30px 15px;
+    direction: ltr;
 }
 
-.language a {
-    display: inline-block;
-    padding: 12px 30px;
-    margin: 5px;
+.language-switch button {
+    min-width: 150px;
+    padding: 14px 25px;
     border: 1px solid #444;
-    border-radius: 12px;
-    background: #111;
-    color: white;
-    text-decoration: none;
+    border-radius: 14px;
+    background: #171717;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.language-switch button:hover {
+    background: #252525;
+    border-color: #777;
+    transform: translateY(-2px);
+}
+
+.language-switch button.active {
+    background: #292929;
+    border-color: #888;
+}
+
+/* Main */
+.page {
+    max-width: 900px;
+    margin: auto;
+    padding: 10px 20px 60px;
+}
+
+/* Header */
+.hero {
+    text-align: center;
+    background: linear-gradient(145deg, #111827, #080b11);
+    border: 1px solid #222;
+    border-radius: 0 0 30px 30px;
+    padding: 55px 25px;
+    margin-bottom: 35px;
+}
+
+.logo {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    margin: 10px 0 0;
+    color: #bdbdbd;
+    font-size: 18px;
+}
+
+/* Cards */
+.card {
+    background: #101010;
+    border: 1px solid #292929;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.card h2 {
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #333;
+    font-size: 25px;
+}
+
+.card p {
+    color: #dedede;
     font-size: 17px;
 }
 
-.language a:hover {
-    background: #222;
+.card ul {
+    padding-right: 25px;
 }
 
-/* LOGO */
-
-.logo {
-    text-align: center;
-    padding: 25px 10px 5px;
-}
-
-.logo img {
-    width: 180px;
-    height: 180px;
-    object-fit: contain;
-    border-radius: 50%;
-}
-
-/* HEADER */
-
-.header {
-    max-width: 900px;
-    margin: 10px auto 0;
-    background: #111827;
-    color: white;
-    padding: 45px 25px;
-    text-align: center;
-    border-radius: 0 0 20px 20px;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 42px;
-}
-
-.header p {
-    font-size: 18px;
-    margin: 10px 0;
+.card li {
+    margin-bottom: 8px;
     color: #ddd;
 }
 
-/* CONTENT */
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-.card {
-    background: #111;
-    margin-top: 25px;
-    padding: 25px;
-    border-radius: 15px;
-    border: 1px solid #333;
-}
-
-h2 {
-    color: white;
-    border-bottom: 1px solid #444;
-    padding-bottom: 8px;
-}
-
-h3 {
-    color: #ddd;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th,
-td {
-    padding: 12px;
-    border-bottom: 1px solid #333;
-    text-align: left;
-}
-
-th {
-    background: #1a1a1a;
-}
-
-.contract {
-    background: #050505;
-    border: 1px solid #333;
-    padding: 15px;
-    border-radius: 10px;
-    word-break: break-all;
-    font-family: monospace;
-}
-
-a {
-    color: #70a7ff;
-}
-
-.warning {
-    background: #21160d;
-    border-left: 5px solid #f97316;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-bottom: 30px;
-    color: #777;
-    font-size: 14px;
-}
-
-/* HIDE LANGUAGE SECTIONS */
-
-#fa {
-    display: none;
-}
-
-/* SHOW PERSIAN WHEN #fa IS SELECTED */
-
-#fa:target {
-    display: block;
-}
-
-#fa:target ~ #en {
-    display: none;
-}
-
-/* RTL */
-
-.rtl {
+/* Persian */
+#persian {
     direction: rtl;
     text-align: right;
 }
 
-.rtl table th,
-.rtl table td {
-    text-align: right;
+#persian .card h2 {
+    color: #ffffff;
+    font-weight: bold;
 }
 
-.rtl .warning {
-    border-left: none;
-    border-right: 5px solid #f97316;
+#persian .card p,
+#persian .card li {
+    font-size: 17px;
+    line-height: 2.2;
 }
 
-.rtl ul {
-    padding-right: 25px;
-    padding-left: 0;
+#persian strong {
+    color: #fff;
 }
-</style>
-</head>
 
-<body>
+/* English */
+#english {
+    direction: ltr;
+    text-align: left;
+    display: none;
+}
 
-<!-- LOGO -->
+#english .card ul {
+    padding-left: 25px;
+    padding-right: 0;
+}
 
-<div class="logo">
-    <img
-        src="https://raw.githubusercontent.com/aliarefialiarefi69/old-eagle-logo/main/logo.png"
-        alt="Old Eagle Logo"
-        onerror="this.style.display='none';"
-    >
-</div>
+/* Contract */
+.contract {
+    background: #080808;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 15px;
+    word-break: break-all;
+    font-family: monospace;
+    color: #ddd;
+    direction: ltr;
+    text-align: left;
+}
 
+/* Footer */
+.footer {
+    text-align: center;
+    color: #777;
+    padding: 30px 10px;
+    font-size: 14px;
+}
 
-<!-- LANGUAGE BUTTONS -->
+/* Mobile */
+@media (max-width: 600px) {
 
-<div class="language">
+    .page {
+        padding: 5px 14px 40px;
+    }
 
-    <a href="#fa">فارسی</a>
+    .hero {
+        padding: 40px 18px;
+    }
 
-    <a href="#en">English</a>
+    .logo {
+        font-size: 58px;
+    }
 
-</div>
+    .hero h1 {
+        font-size: 30px;
+    }
 
+    .hero p {
+        font-size: 16px;
+    }
 
-<!-- ================================================= -->
-<!-- PERSIAN VERSION -->
-<!-- ================================================= -->
-
-<div id="fa" class="rtl">
-
-<div class="header">
-
-<h1>🦅 عقاب پیر</h1>
-
-<p>OEAG — وایت‌پیپر ۱.۰</p>
-
-<p>توکن جامعه‌محور بر بستر TON</p>
-
-</div>
-
-
-<div class="container">
-
-<div class="card">
-
-<h2>۱. مقدمه</h2>
-
-<p>
-عقاب پیر (OEAG) یک توکن دیجیتال جامعه‌محور است که بر بستر بلاکچین TON ایجاد شده است.
-</p>
-
-<p>
-هدف پروژه توسعه یک اکوسیستم متصل به دارایی‌های دیجیتال، NFTها،
-فعالیت‌های جامعه و کاربردهای آینده Web3 است.
-</p>
-
-<p>
-عقاب پیر بر پایه عرضه کل ثابت، اطلاعات شفاف روی زنجیره
-و توسعه تدریجی اکوسیستم طراحی شده است.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h2>۲. اطلاعات توکن</h2>
-
-<table>
-
-<tr>
-<th>مورد</th>
-<th>جزئیات</th>
-</tr>
-
-<tr>
-<td>نام</td>
-<td>Old Eagle</td>
-</tr>
-
-<tr>
-<td>نماد</td>
-<td>OEAG</td>
-</tr>
-
-<tr>
-<td>بلاکچین</td>
-<td>TON</td>
-</tr>
-
-<tr>
-<td>استاندارد توکن</td>
-<td>Jetton</td>
-</tr>
-
-<tr>
-<td>کل عرضه</td>
-<td>1,000,000,000 OEAG</td>
-</tr>
-
-<tr>
-<td>تعداد اعشار</td>
-<td>9</td>
-</tr>
-
-<tr>
-<td>مالکیت</td>
-<td>لغو شده</td>
-</tr>
-
-</table>
-
-</div>
-
-
-<div class="card">
-
-<h2>۳. قرارداد رسمی</h2>
-
-<p>
-آدرس رسمی قرارداد Jetton Master مربوط به Old Eagle:
-</p>
-
-<div class="contract">
-EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
-</div>
-
-<p>
-کاربران باید قبل از هرگونه تعامل با OEAG، آدرس قرارداد را به صورت مستقل بررسی کنند.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h2>۴. عرضه ثابت و مالکیت</h2>
-
-<p>
-عرضه کل Old Eagle برابر با ۱ میلیارد OEAG است.
-</p>
-
-<p>
-مالکیت و کنترل مدیریتی توکن لغو شده است.
-این موضوع با هدف شفافیت وضعیت مدیریتی توکن برای جامعه اعلام شده است.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h2>۵. نقدینگی و معاملات</h2>
-
-<p>
-برای OEAG یک استخر نقدینگی اولیه در STON.fi ایجاد شده است.
-</p>
-
-<p>
-استخر اولیه با موارد زیر ایجاد شد:
-</p>
-
-<ul>
-
-<li>1 TON / Gram</li>
-
-<li>10,000,000 OEAG</li>
-
-</ul>
-
-<p>
-به دلیل محدود بودن نقدینگی اولیه، معاملات ممکن است با تأثیر قابل توجه
-بر قیمت همراه باشند.
-قیمت بازار بر اساس فعالیت معاملاتی و نقدینگی موجود تعیین می‌شود.
-هیچ قیمت ثابت یا تضمین‌شده‌ای وجود ندارد
+    .card {
+        padding: 22px 18px;
+        border
