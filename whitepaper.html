@@ -7,26 +7,43 @@
 <title>Old Eagle (OEAG) — Whitepaper</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
-    color: #1d2329;
-    line-height: 1.7;
+    background: #050505;
+    color: #ffffff;
+    line-height: 1.8;
 }
 
 .container {
     max-width: 900px;
     margin: auto;
-    padding: 30px 20px 60px;
+    padding: 20px;
+}
+
+.logo-box {
+    text-align: center;
+    padding: 30px 0 10px;
+}
+
+.logo-box img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 .header {
-    background: #111827;
+    background: #111;
     color: white;
-    padding: 45px 25px;
+    padding: 35px 20px;
     text-align: center;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
 }
 
 .header h1 {
@@ -36,7 +53,8 @@ body {
 
 .header p {
     font-size: 18px;
-    margin-top: 10px;
+    margin: 8px 0;
+    color: #ccc;
 }
 
 .language-buttons {
@@ -45,32 +63,36 @@ body {
 }
 
 .language-buttons button {
-    border: none;
-    padding: 12px 25px;
+    border: 1px solid #444;
+    padding: 12px 28px;
     margin: 5px;
-    border-radius: 8px;
-    background: #111827;
+    border-radius: 10px;
+    background: #111;
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
 
 .language-buttons button:hover {
-    background: #2563eb;
+    background: #222;
 }
 
 .card {
-    background: white;
+    background: #111;
     margin-top: 25px;
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    border: 1px solid #333;
 }
 
 h2 {
-    color: #111827;
-    border-bottom: 2px solid #e5e7eb;
+    color: white;
+    border-bottom: 1px solid #444;
     padding-bottom: 8px;
+}
+
+h3 {
+    color: #ddd;
 }
 
 table {
@@ -79,18 +101,20 @@ table {
     margin-top: 15px;
 }
 
-th, td {
+th,
+td {
     padding: 12px;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #333;
     text-align: left;
 }
 
 th {
-    background: #f3f4f6;
+    background: #1a1a1a;
 }
 
 .contract {
-    background: #f3f4f6;
+    background: #050505;
+    border: 1px solid #333;
     padding: 15px;
     border-radius: 10px;
     word-break: break-all;
@@ -98,7 +122,7 @@ th {
 }
 
 a {
-    color: #2563eb;
+    color: #70a7ff;
     text-decoration: none;
 }
 
@@ -107,7 +131,7 @@ a:hover {
 }
 
 .warning {
-    background: #fff7ed;
+    background: #21160d;
     border-left: 5px solid #f97316;
     padding: 15px;
     border-radius: 8px;
@@ -116,7 +140,8 @@ a:hover {
 .footer {
     text-align: center;
     margin-top: 40px;
-    color: #6b7280;
+    padding-bottom: 30px;
+    color: #777;
     font-size: 14px;
 }
 
@@ -138,19 +163,37 @@ a:hover {
     border-left: none;
     border-right: 5px solid #f97316;
 }
+
+.rtl ul {
+    padding-right: 25px;
+    padding-left: 0;
+}
 </style>
 </head>
 
 <body>
 
-<!-- LANGUAGE BUTTONS -->
-<div class="language-buttons">
-    <button onclick="showEnglish()">English</button>
-    <button onclick="showPersian()">فارسی</button>
+<!-- LOGO -->
+
+<div class="logo-box">
+    <img
+        src="https://raw.githubusercontent.com/aliarefialiarefi69/old-eagle-logo/main/logo.png"
+        alt="Old Eagle Logo"
+    >
 </div>
 
 
-<!-- ================= ENGLISH ================= -->
+<!-- LANGUAGE BUTTONS -->
+
+<div class="language-buttons">
+    <button onclick="showPersian()">فارسی</button>
+    <button onclick="showEnglish()">English</button>
+</div>
+
+
+<!-- ================================================= -->
+<!-- ENGLISH VERSION -->
+<!-- ================================================= -->
 
 <div id="english">
 
@@ -182,14 +225,46 @@ and gradual ecosystem development.
 <h2>2. Token Information</h2>
 
 <table>
-<tr><th>Item</th><th>Details</th></tr>
-<tr><td>Name</td><td>Old Eagle</td></tr>
-<tr><td>Symbol</td><td>OEAG</td></tr>
-<tr><td>Blockchain</td><td>TON</td></tr>
-<tr><td>Token Standard</td><td>Jetton</td></tr>
-<tr><td>Total Supply</td><td>1,000,000,000 OEAG</td></tr>
-<tr><td>Decimals</td><td>9</td></tr>
-<tr><td>Ownership</td><td>Revoked</td></tr>
+<tr>
+<th>Item</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Name</td>
+<td>Old Eagle</td>
+</tr>
+
+<tr>
+<td>Symbol</td>
+<td>OEAG</td>
+</tr>
+
+<tr>
+<td>Blockchain</td>
+<td>TON</td>
+</tr>
+
+<tr>
+<td>Token Standard</td>
+<td>Jetton</td>
+</tr>
+
+<tr>
+<td>Total Supply</td>
+<td>1,000,000,000 OEAG</td>
+</tr>
+
+<tr>
+<td>Decimals</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>Ownership</td>
+<td>Revoked</td>
+</tr>
+
 </table>
 </div>
 
@@ -249,7 +324,8 @@ liquidity. No fixed or guaranteed price is promised.
 </p>
 
 <p>
-<a href="https://app.ston.fi/swap?ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M"
+<a
+href="https://app.ston.fi/swap?ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M"
 target="_blank">
 Trade OEAG on STON.fi
 </a>
@@ -301,6 +377,7 @@ One of the planned directions for Old Eagle is integration with the NFT ecosyste
 <h2>8. Roadmap</h2>
 
 <h3>Phase 1 — Foundation</h3>
+
 <ul>
 <li>Create Old Eagle Jetton</li>
 <li>Establish fixed supply</li>
@@ -310,7 +387,9 @@ One of the planned directions for Old Eagle is integration with the NFT ecosyste
 <li>Submit OEAG for wallet ecosystem review</li>
 </ul>
 
+
 <h3>Phase 2 — Community</h3>
+
 <ul>
 <li>Build social media presence</li>
 <li>Publish educational content</li>
@@ -318,56 +397,8 @@ One of the planned directions for Old Eagle is integration with the NFT ecosyste
 <li>Grow the community</li>
 </ul>
 
+
 <h3>Phase 3 — Utility</h3>
+
 <ul>
-<li>Develop NFT-related applications</li>
-<li>Introduce community activities</li>
-<li>Explore practical OEAG use cases</li>
-</ul>
-
-<h3>Phase 4 — Ecosystem</h3>
-<ul>
-<li>Develop liquidity according to available resources</li>
-<li>Explore partnerships</li>
-<li>Improve market accessibility</li>
-</ul>
-
-<h3>Phase 5 — Exchange Applications</h3>
-<ul>
-<li>Prepare professional project documentation</li>
-<li>Apply to suitable centralized exchanges</li>
-<li>Expand market accessibility where possible</li>
-</ul>
-
-<h3>Phase 6 — Long-Term Development</h3>
-<ul>
-<li>Expand the Old Eagle ecosystem</li>
-<li>Develop additional utilities</li>
-<li>Explore partnerships within TON and Web3</li>
-</ul>
-</div>
-
-
-<div class="card">
-<h2>9. Transparency</h2>
-
-<p>
-Old Eagle intends to publish important project information publicly,
-including token contract information, supply information, official website,
-trading links and project updates.
-</p>
-
-<p>
-<a href="https://aliarefialiarefi69.github.io/old-eagle/" target="_blank">
-Official Old Eagle Website
-</a>
-</p>
-</div>
-
-
-<div class="card">
-<h2>10. Risk Disclosure</h2>
-
-<div class="warning">
-<strong>Important:</strong>
-OEAG is a cryptocurrency token and its market value can change significantly.
+<li>Develop NFT-related applications</li
