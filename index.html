@@ -7,212 +7,285 @@
 <title>Old Eagle (OEAG)</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Tahoma, sans-serif;
+body{
+    font-family:Arial,Helvetica,sans-serif;
     background:
-        radial-gradient(circle at 10% 10%, #123d52 0%, transparent 30%),
-        radial-gradient(circle at 90% 20%, #40206d 0%, transparent 30%),
-        radial-gradient(circle at 50% 100%, #164d45 0%, transparent 30%),
-        #05070b;
-    color: white;
-    line-height: 1.7;
+        radial-gradient(circle at 20% 10%, #12345a 0%, transparent 35%),
+        radial-gradient(circle at 80% 20%, #40145f 0%, transparent 35%),
+        linear-gradient(135deg,#030712,#080b18,#050505);
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
 }
 
-.container {
-    max-width: 1050px;
-    margin: auto;
-    padding: 25px 18px 50px;
+body:before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#00eaff;
+    opacity:.08;
+    filter:blur(120px);
+    top:-200px;
+    left:-150px;
+    pointer-events:none;
 }
 
-.hero {
-    text-align: center;
-    padding: 55px 20px;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+body:after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#9b00ff;
+    opacity:.08;
+    filter:blur(120px);
+    bottom:-200px;
+    right:-150px;
+    pointer-events:none;
 }
 
-.logo {
-    width: 220px;
-    height: 220px;
-    object-fit: contain;
-    border-radius: 50%;
-    border: 3px solid #00eaff;
-    box-shadow:
-        0 0 35px rgba(0,234,255,0.45),
-        0 0 90px rgba(125,80,255,0.25);
-    margin-bottom: 20px;
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
 }
 
-h1 {
-    font-size: 58px;
-    margin-bottom: 8px;
-    background: linear-gradient(90deg,#00eaff,#8b5cff,#ffd84d);
-    -webkit-background-clip: text;
-    color: transparent;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 0;
 }
 
-.tagline {
-    color: #b7c2d1;
-    font-size: 18px;
-    margin-bottom: 25px;
+.logo-small{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,.3);
+    box-shadow:0 0 30px rgba(0,234,255,.25);
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
+.nav-buttons{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    justify-content:flex-end;
 }
 
-.button {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    padding: 13px 24px;
-    border-radius: 14px;
-    font-weight: bold;
-    background: linear-gradient(135deg,#087f9c,#6339c8);
-    transition: 0.25s;
+.button{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding:13px 22px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(10px);
+    transition:.3s;
+    font-weight:bold;
 }
 
-.button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0,234,255,0.25);
+.button:hover{
+    transform:translateY(-3px);
+    background:rgba(255,255,255,.15);
+    box-shadow:0 10px 30px rgba(0,234,255,.2);
 }
 
-.button.gold {
-    background: linear-gradient(135deg,#b8860b,#ffd84d);
-    color: #111;
+.buy{
+    background:linear-gradient(90deg,#00d9ff,#0077ff);
+    border:none;
+    box-shadow:0 0 25px rgba(0,217,255,.35);
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 18px;
-    margin-top: 22px;
+.buy:hover{
+    box-shadow:0 0 40px rgba(0,217,255,.65);
 }
 
-.card {
-    padding: 25px;
-    border-radius: 22px;
-    background: rgba(255,255,255,0.055);
-    border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px);
+.gold{
+    background:linear-gradient(90deg,#ffb300,#ff6a00);
+    border:none;
 }
 
-.card h2 {
-    color: #00eaff;
-    margin-bottom: 10px;
-    font-size: 22px;
+.hero{
+    text-align:center;
+    padding:55px 0 80px;
 }
 
-.card p {
-    color: #cbd3df;
+.hero-logo{
+    width:min(420px,82vw);
+    height:min(420px,82vw);
+    object-fit:contain;
+    border-radius:50%;
+    margin-bottom:25px;
+    filter:
+        drop-shadow(0 0 25px rgba(255,255,255,.25))
+        drop-shadow(0 0 60px rgba(0,220,255,.18));
+    animation:float 5s ease-in-out infinite;
 }
 
-.section {
-    margin-top: 22px;
-    padding: 30px;
-    border-radius: 24px;
-    background: rgba(255,255,255,0.055);
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.section h2 {
-    color: #ffd84d;
-    margin-bottom: 15px;
-}
-
-.section p {
-    color: #cbd3df;
-}
-
-.roadmap {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px;
-}
-
-.phase {
-    padding: 20px;
-    border-radius: 18px;
-    background: rgba(0,234,255,0.06);
-    border: 1px solid rgba(0,234,255,0.12);
-}
-
-.phase strong {
-    color: #00eaff;
-}
-
-.contract {
-    direction: ltr;
-    text-align: center;
-    word-break: break-all;
-    margin-top: 15px;
-    padding: 16px;
-    border-radius: 14px;
-    background: rgba(0,0,0,0.4);
-    color: #00eaff;
-}
-
-footer {
-    text-align: center;
-    color: #768293;
-    margin-top: 30px;
-    font-size: 13px;
-}
-
-@media(max-width:800px) {
-
-    .grid,
-    .roadmap {
-        grid-template-columns: 1fr;
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
     }
-
-    h1 {
-        font-size: 42px;
-    }
-
-    .logo {
-        width: 180px;
-        height: 180px;
+    50%{
+        transform:translateY(-12px);
     }
 }
 
-@media(max-width:500px) {
+.hero h1{
+    font-size:clamp(42px,8vw,78px);
+    letter-spacing:2px;
+    background:linear-gradient(90deg,#ffffff,#8eeeff,#ffffff);
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:15px;
+}
 
-    .container {
-        padding: 12px 10px 35px;
+.hero p{
+    max-width:720px;
+    margin:auto;
+    color:#b9c4d6;
+    font-size:20px;
+    line-height:1.7;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.hero-buttons .button{
+    min-width:170px;
+    font-size:17px;
+}
+
+.section{
+    margin:30px 0;
+    padding:35px;
+    border-radius:25px;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(16px);
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.section h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+}
+
+.card{
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(0,220,255,.4);
+    box-shadow:0 15px 40px rgba(0,220,255,.1);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#7eeeff;
+}
+
+.card p{
+    color:#aeb9cb;
+    line-height:1.6;
+}
+
+.contract{
+    word-break:break-all;
+    color:#79eaff;
+    font-size:14px;
+    margin-top:10px;
+}
+
+.roadmap{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.phase{
+    padding:22px;
+    border-left:3px solid #00d9ff;
+    background:rgba(0,217,255,.05);
+    border-radius:15px;
+}
+
+.phase strong{
+    color:#00eaff;
+    display:block;
+    margin-bottom:8px;
+}
+
+.risk{
+    color:#b8c2d2;
+    line-height:1.8;
+}
+
+footer{
+    text-align:center;
+    padding:50px 0 30px;
+    color:#788398;
+}
+
+@media(max-width:600px){
+
+    nav{
+        align-items:flex-start;
     }
 
-    .hero {
-        padding: 35px 15px;
+    .logo-small{
+        width:50px;
+        height:50px;
     }
 
-    h1 {
-        font-size: 34px;
+    .nav-buttons{
+        gap:6px;
     }
 
-    .tagline {
-        font-size: 15px;
+    .button{
+        padding:10px 14px;
+        font-size:13px;
     }
 
-    .logo {
-        width: 160px;
-        height: 160px;
+    .hero{
+        padding-top:35px;
+    }
+
+    .hero-logo{
+        width:310px;
+        height:310px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:23px;
     }
 }
 </style>
@@ -222,65 +295,227 @@ footer {
 
 <div class="container">
 
+<nav>
+
+<img src="logo.png" class="logo-small" alt="Old Eagle Logo">
+
+<div class="nav-buttons">
+
+<a class="button buy"
+href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
+target="_blank">
+🛒 Buy OEAG
+</a>
+
+<a class="button"
+href="whitepaperEN.html">
+Whitepaper
+</a>
+
+<a class="button gold"
+href="whitepaperFA.html">
+فارسی
+</a>
+
+</div>
+
+</nav>
+
+
 <section class="hero">
 
-    <img src="logo.png"
-         alt="Old Eagle Logo"
-         class="logo"
-         onerror="this.style.display='none';">
+<img src="logo.png" class="hero-logo" alt="Old Eagle">
 
-    <h1>Old Eagle</h1>
+<h1>OLD EAGLE</h1>
 
-    <div class="tagline">
-        Old Eagle (OEAG) — A community-driven project on TON
-    </div>
+<p>
+Old Eagle (OEAG) is a community-driven token built on the TON blockchain,
+focused on building a growing digital ecosystem around community,
+NFTs and future Web3 utilities.
+</p>
 
-    <div class="buttons">
+<div class="hero-buttons">
 
-        <a class="button"
-           href="/old-eagle/whitepaperEN.html">
-            Whitepaper
-        </a>
+<a class="button buy"
+href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
+target="_blank">
+🛒 BUY OEAG
+</a>
 
-        <a class="button gold"
-           href="/old-eagle/whitepaperFA.html">
-            فارسی
-        </a>
+<a class="button"
+href="whitepaperEN.html">
+📄 WHITEPAPER
+</a>
 
-    </div>
+<a class="button gold"
+href="whitepaperFA.html">
+🇮🇷 فارسی
+</a>
+
+</div>
 
 </section>
 
 
+<section class="section">
+
+<h2>🦅 Old Eagle Ecosystem</h2>
+
 <div class="grid">
 
-    <div class="card">
-        <h2>🦅 Old Eagle</h2>
-        <p>
-            A community-driven digital project built on the TON blockchain.
-        </p>
-    </div>
+<div class="card">
+<h3>OEAG Token</h3>
+<p>
+Old Eagle is a TON-based Jetton with a fixed total supply.
+</p>
+</div>
 
-    <div class="card">
-        <h2>💎 OEAG</h2>
-        <p>
-            The native token of the Old Eagle ecosystem.
-        </p>
-    </div>
+<div class="card">
+<h3>NFT Ecosystem</h3>
+<p>
+Future plans include NFT-related activities and community experiences.
+</p>
+</div>
 
-    <div class="card">
-        <h2>🌐 TON</h2>
-        <p>
-            Built on the TON blockchain and designed for the Web3 ecosystem.
-        </p>
-    </div>
+<div class="card">
+<h3>Community</h3>
+<p>
+Community participation, campaigns, activities and future rewards.
+</p>
+</div>
+
+<div class="card">
+<h3>Future Web3</h3>
+<p>
+The project is designed to gradually expand toward broader Web3 utilities.
+</p>
+</div>
 
 </div>
+
+</section>
 
 
 <section class="section">
 
-    <h2>About Old Eagle</h2>
+<h2>📊 Token Information</h2>
 
-    <p>
-        Old Eagle (OEAG) is a community-driven project built
+<div class="grid">
+
+<div class="card">
+<h3>Name</h3>
+<p>Old Eagle</p>
+</div>
+
+<div class="card">
+<h3>Symbol</h3>
+<p>OEAG</p>
+</div>
+
+<div class="card">
+<h3>Network</h3>
+<p>TON Blockchain</p>
+</div>
+
+<div class="card">
+<h3>Total Supply</h3>
+<p>1,000,000,000 OEAG</p>
+</div>
+
+</div>
+
+<p class="contract">
+Contract:<br>
+EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M
+</p>
+
+</section>
+
+
+<section class="section">
+
+<h2>🚀 Roadmap</h2>
+
+<div class="roadmap">
+
+<div class="phase">
+<strong>Phase 1</strong>
+Foundation
+</div>
+
+<div class="phase">
+<strong>Phase 2</strong>
+Community
+</div>
+
+<div class="phase">
+<strong>Phase 3</strong>
+Utility
+</div>
+
+<div class="phase">
+<strong>Phase 4</strong>
+Ecosystem
+</div>
+
+<div class="phase">
+<strong>Phase 5</strong>
+Exchange Applications
+</div>
+
+<div class="phase">
+<strong>Phase 6</strong>
+Long-Term Development
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>⚠️ Risk Disclosure</h2>
+
+<p class="risk">
+OEAG is a digital asset and its market value may be highly volatile.
+There is no guarantee of price appreciation, future exchange listings,
+adoption, liquidity or any particular level of demand.
+
+Any purchase, sale, transfer or trade of OEAG is made at the individual's
+own responsibility. Users should conduct their own research and understand
+the risks before interacting with digital assets.
+</p>
+
+</section>
+
+
+<section class="section" style="text-align:center;">
+
+<h2>🛒 Get OEAG</h2>
+
+<p style="color:#b9c4d6;line-height:1.7;margin-bottom:25px;">
+Trade OEAG through the STON.fi decentralized exchange on TON.
+</p>
+
+<a class="button buy"
+style="font-size:19px;padding:16px 35px;"
+href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
+target="_blank">
+🛒 BUY OLD EAGLE (OEAG)
+</a>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Old Eagle (OEAG)</p>
+<p>Built on TON • Community Driven • Web3</p>
+
+</footer>
+
+</div>
+
+</body>
+</html>
