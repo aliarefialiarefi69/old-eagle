@@ -1,178 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Old Eagle (OEAG) — Whitepaper</title>
 
 <style>
 
 * {
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing: border-box;
 }
 
 body {
-
-font-family:Arial,Helvetica,sans-serif;
-
-background:
-radial-gradient(circle at 10% 10%,rgba(0,225,255,.15),transparent 30%),
-radial-gradient(circle at 90% 20%,rgba(130,50,255,.15),transparent 30%),
-#050914;
-
-color:white;
-line-height:1.8;
-
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #1d2329;
+    line-height: 1.8;
 }
 
 .container {
-
-width:92%;
-max-width:900px;
-margin:auto;
-
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px 60px;
 }
 
-header {
-
-text-align:center;
-padding:45px 0;
-
+.header {
+    background: #111827;
+    color: #fff;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
 }
 
-.logo {
-
-width:150px;
-height:150px;
-
-object-fit:cover;
-
-border-radius:50%;
-
-padding:4px;
-
-background:linear-gradient(135deg,#00eaff,#783cff,#ffd000);
-
-box-shadow:0 0 40px rgba(0,225,255,.25);
-
+.header h1 {
+    margin: 0;
+    font-size: 42px;
 }
 
-h1 {
-
-margin-top:25px;
-
-font-size:45px;
-
-background:linear-gradient(90deg,#fff,#00eaff,#a967ff);
-
--webkit-background-clip:text;
-background-clip:text;
-
-color:transparent;
-
+.header p {
+    font-size: 18px;
+    margin: 8px 0;
 }
 
-.subtitle {
-
-color:#9facbf;
-
-margin-top:10px;
-
+.lang {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
 }
 
-.buttons {
-
-display:flex;
-
-justify-content:center;
-
-gap:10px;
-
-flex-wrap:wrap;
-
-margin:25px 0;
-
+.lang button {
+    padding: 9px 17px;
+    border: 1px solid #9ca3af;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
 }
 
-.buttons a {
-
-color:white;
-
-text-decoration:none;
-
-padding:10px 17px;
-
-border-radius:25px;
-
-background:rgba(255,255,255,.07);
-
-border:1px solid rgba(255,255,255,.15);
-
+.lang button.active {
+    background: white;
+    color: #111827;
+    font-weight: bold;
 }
 
-section {
-
-margin:20px 0;
-
-padding:25px;
-
-background:rgba(255,255,255,.045);
-
-border:1px solid rgba(255,255,255,.09);
-
-border-radius:18px;
-
+.card {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px #00000014;
 }
 
 h2 {
-
-color:#00e5ff;
-
-margin-bottom:12px;
-
+    color: #111827;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 8px;
 }
 
-p {
-
-color:#b2bfd1;
-
-margin-bottom:12px;
-
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
 }
 
-ul {
-
-padding-left:25px;
-
-color:#b2bfd1;
-
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
 }
 
-li {
-
-margin-bottom:8px;
-
+th {
+    background: #f3f4f6;
 }
 
 .contract {
-
-word-break:break-all;
-
-color:#00e5ff;
-
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 10px;
+    word-break: break-all;
+    font-family: monospace;
+    direction: ltr;
+    text-align: left;
 }
 
-footer {
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
 
-text-align:center;
+a:hover {
+    text-decoration: underline;
+}
 
-padding:40px;
+.warning {
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 15px;
+    border-radius: 8px;
+}
 
-color:#718096;
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+html[dir="rtl"] th,
+html[dir="rtl"] td {
+    text-align: right;
+}
+
+html[dir="rtl"] .warning {
+    border-left: 0;
+    border-right: 5px solid #f97316;
+}
+
+@media(max-width:600px) {
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 
 }
 
@@ -180,41 +168,38 @@ color:#718096;
 
 </head>
 
+
 <body>
 
-<header>
+<header class="header">
 
-<div class="container">
+<h1>🦅 Old Eagle</h1>
 
-<img
-src="1000022248-1.png"
-class="logo"
-alt="Old Eagle Logo"
+<p>OEAG — Whitepaper 1.0</p>
+
+<p
+data-en="Community-Driven Token on TON"
+data-fa="توکن جامعه‌محور بر بستر TON"
 >
-
-<h1>Old Eagle (OEAG)</h1>
-
-<p class="subtitle">
-Whitepaper
+Community-Driven Token on TON
 </p>
 
-<div class="buttons">
+<div class="lang">
 
-<a href="index.html">
-🏠 Home
-</a>
+<button
+id="enBtn"
+class="active"
+onclick="setLang('en')"
+>
+English
+</button>
 
-<a href="whitepaperFA.html">
-🇮🇷 فارسی
-</a>
-
-<a
-href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
-target="_blank">
-🦅 Buy OEAG
-</a>
-
-</div>
+<button
+id="faBtn"
+onclick="setLang('fa')"
+>
+فارسی
+</button>
 
 </div>
 
@@ -224,248 +209,819 @@ target="_blank">
 <main class="container">
 
 
-<section>
+<section class="card">
 
-<h2>1. Introduction</h2>
+<h2
+data-en="1. Introduction"
+data-fa="۱. مقدمه"
+>
+1. Introduction
+</h2>
 
-<p>
-Old Eagle (OEAG) is a community-driven digital project built on the TON blockchain.
-The project aims to connect digital assets, NFTs, community participation and future Web3 utilities.
+<p
+data-en="Old Eagle (OEAG) is a community-driven digital token built on the TON blockchain. The project aims to develop an ecosystem connecting digital assets, NFTs, community activities and future Web3 applications."
+data-fa="عقاب پیر (OEAG) یک توکن دیجیتال جامعه‌محور است که بر بستر بلاکچین TON ایجاد شده است. هدف پروژه، توسعه اکوسیستمی است که دارایی‌های دیجیتال، توکن‌های غیرمثلی (NFT)، فعالیت‌های اجتماعی و برنامه‌های آینده وب۳ را به هم متصل کند."
+>
+Old Eagle (OEAG) is a community-driven digital token built on the TON blockchain. The project aims to develop an ecosystem connecting digital assets, NFTs, community activities and future Web3 applications.
 </p>
 
-<p>
-Old Eagle focuses on transparency, gradual development and community involvement.
+<p
+data-en="Old Eagle is designed around a fixed total supply, transparent on-chain information and gradual ecosystem development."
+data-fa="عقاب پیر بر پایه عرضه کل ثابت، اطلاعات شفاف روی زنجیره و توسعه تدریجی اکوسیستم طراحی شده است."
+>
+Old Eagle is designed around a fixed total supply, transparent on-chain information and gradual ecosystem development.
 </p>
 
 </section>
 
 
-<section>
+<section class="card">
 
-<h2>2. Token Information</h2>
+<h2
+data-en="2. Token Information"
+data-fa="۲. اطلاعات توکن"
+>
+2. Token Information
+</h2>
+
+<table>
+
+<tr>
+<th
+data-en="Item"
+data-fa="مورد"
+>
+Item
+</th>
+
+<th
+data-en="Details"
+data-fa="جزئیات"
+>
+Details
+</th>
+</tr>
+
+<tr>
+<td
+data-en="Name"
+data-fa="نام"
+>
+Name
+</td>
+
+<td>
+Old Eagle
+</td>
+</tr>
+
+<tr>
+<td>
+Symbol
+</td>
+
+<td>
+OEAG
+</td>
+</tr>
+
+<tr>
+<td
+data-en="Blockchain"
+data-fa="بلاکچین"
+>
+Blockchain
+</td>
+
+<td>
+TON
+</td>
+</tr>
+
+<tr>
+<td
+data-en="Token Standard"
+data-fa="استاندارد توکن"
+>
+Token Standard
+</td>
+
+<td>
+Jetton
+</td>
+</tr>
+
+<tr>
+<td
+data-en="Total Supply"
+data-fa="عرضه کل"
+>
+Total Supply
+</td>
+
+<td>
+1,000,000,000 OEAG
+</td>
+</tr>
+
+<tr>
+<td
+data-en="Decimals"
+data-fa="اعشار"
+>
+Decimals
+</td>
+
+<td>
+9
+</td>
+</tr>
+
+<tr>
+<td
+data-en="Ownership"
+data-fa="وضعیت مالکیت"
+>
+Ownership
+</td>
+
+<td
+data-en="Revoked"
+data-fa="لغو شده"
+>
+Revoked
+</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<section class="card">
+
+<h2
+data-en="3. Official Contract"
+data-fa="۳. قرارداد رسمی"
+>
+3. Official Contract
+</h2>
+
+<p
+data-en="The official Old Eagle Jetton Master contract is:"
+data-fa="آدرس رسمی قرارداد اصلی جتون (Jetton Master) عقاب پیر:"
+>
+The official Old Eagle Jetton Master contract is:
+</p>
+
+<div class="contract">
+
+EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
+
+</div>
+
+<p
+data-en="Users should independently verify the contract before interacting with OEAG."
+data-fa="کاربران باید پیش از تعامل با OEAG، آدرس قرارداد را مستقلاً بررسی کنند."
+>
+Users should independently verify the contract before interacting with OEAG.
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h2
+data-en="4. Fixed Supply & Ownership"
+data-fa="۴. عرضه ثابت و مالکیت"
+>
+4. Fixed Supply & Ownership
+</h2>
+
+<p
+data-en="The total supply of Old Eagle is 1 billion OEAG."
+data-fa="عرضه کل عقاب پیر برابر با یک میلیارد OEAG است."
+>
+The total supply of Old Eagle is 1 billion OEAG.
+</p>
+
+<p
+data-en="Ownership and administrative control have been revoked. This information is intended to make the token's administrative status transparent to the community."
+data-fa="مالکیت و دسترسی‌های مدیریتی قرارداد لغو شده‌اند. اعلام این موضوع برای شفاف‌سازی وضعیت مدیریتی توکن برای جامعه است."
+>
+Ownership and administrative control have been revoked. This information is intended to make the token's administrative status transparent to the community.
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h2
+data-en="5. Liquidity & Trading"
+data-fa="۵. نقدینگی و معامله"
+>
+5. Liquidity & Trading
+</h2>
+
+<p
+data-en="OEAG is available for trading through decentralized infrastructure on the TON blockchain, including liquidity on STON.fi."
+data-fa="OEAG از طریق زیرساخت‌های غیرمتمرکز روی بلاکچین TON، از جمله نقدینگی در STON.fi، برای معامله در دسترس است."
+>
+OEAG is available for trading through decentralized infrastructure on the TON blockchain, including liquidity on STON.fi.
+</p>
+
+<p
+data-en="The current trading environment may change over time as liquidity and market activity develop. The market price is determined by trading activity and available liquidity. No fixed or guaranteed price is promised."
+data-fa="شرایط معاملاتی فعلی ممکن است با توسعه نقدینگی و فعالیت بازار در طول زمان تغییر کند. قیمت بازار بر اساس فعالیت معاملاتی و نقدینگی موجود تعیین می‌شود و هیچ قیمت ثابت یا تضمین‌شده‌ای وعده داده نمی‌شود."
+>
+The current trading environment may change over time as liquidity and market activity develop. The market price is determined by trading activity and available liquidity. No fixed or guaranteed price is promised.
+</p>
+
+<p>
+
+<a
+href="https://app.ston.fi/swap?ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M"
+target="_blank"
+rel="noopener"
+data-en="Trade OEAG on STON.fi"
+data-fa="معامله OEAG در STON.fi"
+>
+Trade OEAG on STON.fi
+</a>
+
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h2
+data-en="6. Planned Utility"
+data-fa="۶. کاربردهای برنامه‌ریزی‌شده"
+>
+6. Planned Utility
+</h2>
+
+<p
+data-en="The following are planned ecosystem directions and are not claims of currently available functionality:"
+data-fa="موارد زیر مسیرهای توسعه برنامه‌ریزی‌شده هستند و به معنی فعال بودن فعلی این قابلیت‌ها نیستند:"
+>
+The following are planned ecosystem directions and are not claims of currently available functionality:
+</p>
 
 <ul>
 
-<li><strong>Name:</strong> Old Eagle</li>
+<li
+data-en="Old Eagle NFT ecosystem"
+data-fa="اکوسیستم NFT عقاب پیر"
+>
+Old Eagle NFT ecosystem
+</li>
 
-<li><strong>Symbol:</strong> OEAG</li>
+<li
+data-en="NFT-related community activities"
+data-fa="فعالیت‌های اجتماعی مرتبط با NFT"
+>
+NFT-related community activities
+</li>
 
-<li><strong>Network:</strong> TON</li>
+<li
+data-en="Community rewards"
+data-fa="پاداش‌های جامعه"
+>
+Community rewards
+</li>
 
-<li><strong>Token Type:</strong> Jetton</li>
+<li
+data-en="Future OEAG-based services"
+data-fa="خدمات آینده مبتنی بر OEAG"
+>
+Future OEAG-based services
+</li>
 
-<li><strong>Total Supply:</strong> 1,000,000,000 OEAG</li>
+<li
+data-en="Community campaigns and events"
+data-fa="کمپین‌ها و رویدادهای اجتماعی"
+>
+Community campaigns and events
+</li>
 
-<li><strong>Decimals:</strong> 9</li>
+<li
+data-en="Potential partnerships within the TON ecosystem"
+data-fa="همکاری‌های احتمالی در اکوسیستم TON"
+>
+Potential partnerships within the TON ecosystem
+</li>
 
-<li><strong>Ownership:</strong> Revoked</li>
+</ul>
+
+<p
+data-en="Future utilities will be announced publicly when they become operational."
+data-fa="کاربردهای آینده پس از عملیاتی شدن، به‌صورت عمومی اعلام خواهند شد."
+>
+Future utilities will be announced publicly when they become operational.
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h2
+data-en="7. NFT Ecosystem"
+data-fa="۷. اکوسیستم NFT"
+>
+7. NFT Ecosystem
+</h2>
+
+<p
+data-en="One of the planned directions for Old Eagle is integration with the NFT ecosystem."
+data-fa="یکی از مسیرهای برنامه‌ریزی‌شده عقاب پیر، پیوند با اکوسیستم NFT است."
+>
+One of the planned directions for Old Eagle is integration with the NFT ecosystem.
+</p>
+
+<ul>
+
+<li
+data-en="Old Eagle themed NFTs"
+data-fa="NFTهایی با موضوع عقاب پیر"
+>
+Old Eagle themed NFTs
+</li>
+
+<li
+data-en="Limited digital collectibles"
+data-fa="کلکسیون‌های دیجیتال محدود"
+>
+Limited digital collectibles
+</li>
+
+<li
+data-en="Community NFT events"
+data-fa="رویدادهای NFT جامعه"
+>
+Community NFT events
+</li>
+
+<li
+data-en="NFT-related activities involving OEAG"
+data-fa="فعالیت‌های مرتبط با NFT با استفاده از OEAG"
+>
+NFT-related activities involving OEAG
+</li>
+
+<li
+data-en="Custom NFT projects"
+data-fa="پروژه‌های اختصاصی NFT"
+>
+Custom NFT projects
+</li>
 
 </ul>
 
 </section>
 
 
-<section>
+<section class="card">
 
-<h2>3. Official Contract</h2>
-
-<p>
-The official OEAG Jetton contract is:
-</p>
-
-<p class="contract">
-EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M
-</p>
-
-</section>
+<h2
+data-en="8. Roadmap"
+data-fa="۸. نقشه راه"
+>
+8. Roadmap
+</h2>
 
 
-<section>
-
-<h2>4. Fixed Supply</h2>
-
-<p>
-The total supply of OEAG is fixed at 1,000,000,000 tokens.
-</p>
-
-<p>
-Ownership has been revoked, meaning additional token minting is not controlled
-through the project owner.
-</p>
-
-</section>
-
-
-<section>
-
-<h2>5. Liquidity and Trading</h2>
-
-<p>
-OEAG is currently tradable within the TON ecosystem through decentralized
-infrastructure on STON.fi.
-</p>
-
-<p>
-Project liquidity is being developed gradually and may change over time
-based on project growth, community activity and market conditions.
-</p>
-
-<p>
-The market price of OEAG may change depending on liquidity, trading activity,
-supply and demand. There is no fixed or guaranteed token price.
-</p>
-
-</section>
-
-
-<section>
-
-<h2>6. Planned Utility</h2>
+<h3
+data-en="Phase 1 — Foundation"
+data-fa="مرحله ۱ — پایه‌گذاری"
+>
+Phase 1 — Foundation
+</h3>
 
 <ul>
 
-<li>NFT ecosystem activities</li>
+<li
+data-en="Create Old Eagle Jetton"
+data-fa="ایجاد جتون عقاب پیر"
+>
+Create Old Eagle Jetton
+</li>
 
-<li>Community events and campaigns</li>
+<li
+data-en="Establish fixed supply"
+data-fa="تعیین عرضه ثابت"
+>
+Establish fixed supply
+</li>
 
-<li>Potential community rewards</li>
+<li
+data-en="Revoke ownership"
+data-fa="لغو مالکیت مدیریتی"
+>
+Revoke ownership
+</li>
 
-<li>Future OEAG-related services</li>
+<li
+data-en="Establish and maintain liquidity"
+data-fa="ایجاد و حفظ نقدینگی"
+>
+Establish and maintain liquidity
+</li>
 
-<li>Potential partnerships within the TON ecosystem</li>
+<li
+data-en="Launch official website"
+data-fa="راه‌اندازی وب‌سایت رسمی"
+>
+Launch official website
+</li>
+
+<li
+data-en="Submit OEAG for wallet ecosystem review"
+data-fa="ارسال OEAG برای بررسی در اکوسیستم کیف پول"
+>
+Submit OEAG for wallet ecosystem review
+</li>
 
 </ul>
 
-<p>
-These utilities represent development plans and are not guarantees of future implementation.
-</p>
 
-</section>
-
-
-<section>
-
-<h2>7. NFT Plans</h2>
-
-<p>
-Old Eagle may expand into NFT-related activities and digital collectibles.
-Future NFT initiatives may provide additional opportunities for community participation.
-</p>
-
-<p>
-Specific features and benefits may change as the project develops.
-</p>
-
-</section>
-
-
-<section>
-
-<h2>8. Roadmap</h2>
+<h3
+data-en="Phase 2 — Community"
+data-fa="مرحله ۲ — جامعه‌سازی"
+>
+Phase 2 — Community
+</h3>
 
 <ul>
 
-<li><strong>Phase 1:</strong> Project foundation and token launch</li>
+<li
+data-en="Build social media presence"
+data-fa="ایجاد حضور در شبکه‌های اجتماعی"
+>
+Build social media presence
+</li>
 
-<li><strong>Phase 2:</strong> Community development and project awareness</li>
+<li
+data-en="Publish educational content"
+data-fa="انتشار محتوای آموزشی"
+>
+Publish educational content
+</li>
 
-<li><strong>Phase 3:</strong> Utility and ecosystem development</li>
+<li
+data-en="Introduce the Old Eagle brand"
+data-fa="معرفی برند عقاب پیر"
+>
+Introduce the Old Eagle brand
+</li>
 
-<li><strong>Phase 4:</strong> Ecosystem expansion and potential partnerships</li>
-
-<li><strong>Phase 5:</strong> Liquidity and market development</li>
-
-<li><strong>Phase 6:</strong> Evaluation and submission of applications for centralized exchange (CEX) listings</li>
-
-<li><strong>Phase 7:</strong> Long-term development and future utilities</li>
+<li
+data-en="Grow the community"
+data-fa="گسترش جامعه"
+>
+Grow the community
+</li>
 
 </ul>
 
+
+<h3
+data-en="Phase 3 — Utility"
+data-fa="مرحله ۳ — کاربردها"
+>
+Phase 3 — Utility
+</h3>
+
+<ul>
+
+<li
+data-en="Develop NFT-related applications"
+data-fa="توسعه برنامه‌های مرتبط با NFT"
+>
+Develop NFT-related applications
+</li>
+
+<li
+data-en="Introduce community activities"
+data-fa="راه‌اندازی فعالیت‌های اجتماعی"
+>
+Introduce community activities
+</li>
+
+<li
+data-en="Explore practical OEAG use cases"
+data-fa="بررسی کاربردهای عملی OEAG"
+>
+Explore practical OEAG use cases
+</li>
+
+</ul>
+
+
+<h3
+data-en="Phase 4 — Ecosystem"
+data-fa="مرحله ۴ — اکوسیستم"
+>
+Phase 4 — Ecosystem
+</h3>
+
+<ul>
+
+<li
+data-en="Develop liquidity according to available resources"
+data-fa="توسعه نقدینگی متناسب با منابع موجود"
+>
+Develop liquidity according to available resources
+</li>
+
+<li
+data-en="Explore partnerships"
+data-fa="بررسی فرصت‌های همکاری"
+>
+Explore partnerships
+</li>
+
+<li
+data-en="Improve market accessibility"
+data-fa="بهبود دسترسی به بازار"
+>
+Improve market accessibility
+</li>
+
+</ul>
+
+
+<h3
+data-en="Phase 5 — Exchange Applications"
+data-fa="مرحله ۵ — درخواست از صرافی‌ها"
+>
+Phase 5 — Exchange Applications
+</h3>
+
+<ul>
+
+<li
+data-en="Prepare professional project documentation"
+data-fa="آماده‌سازی مستندات حرفه‌ای پروژه"
+>
+Prepare professional project documentation
+</li>
+
+<li
+data-en="Apply to suitable centralized exchanges"
+data-fa="درخواست فهرست شدن در صرافی‌های متمرکز مناسب"
+>
+Apply to suitable centralized exchanges
+</li>
+
+<li
+data-en="Expand market accessibility where possible"
+data-fa="گسترش دسترسی به بازار در صورت امکان"
+>
+Expand market accessibility where possible
+</li>
+
+</ul>
+
+
+<h3
+data-en="Phase 6 — Long-Term Development"
+data-fa="مرحله ۶ — توسعه بلندمدت"
+>
+Phase 6 — Long-Term Development
+</h3>
+
+<ul>
+
+<li
+data-en="Expand the Old Eagle ecosystem"
+data-fa="گسترش اکوسیستم عقاب پیر"
+>
+Expand the Old Eagle ecosystem
+</li>
+
+<li
+data-en="Develop additional utilities"
+data-fa="توسعه کاربردهای بیشتر"
+>
+Develop additional utilities
+</li>
+
+<li
+data-en="Explore partnerships within TON and Web3"
+data-fa="بررسی همکاری‌ها در TON و وب۳"
+>
+Explore partnerships within TON and Web3
+</li>
+
+</ul>
+
+</section>
+
+
+<section class="card">
+
+<h2
+data-en="9. Transparency"
+data-fa="۹. شفافیت"
+>
+9. Transparency
+</h2>
+
+<p
+data-en="Old Eagle intends to publish important project information publicly, including token contract information, supply information, official website, trading links and project updates."
+data-fa="عقاب پیر قصد دارد اطلاعات مهم پروژه، از جمله قرارداد توکن، میزان عرضه، وب‌سایت رسمی، پیوندهای معاملاتی و به‌روزرسانی‌ها را به‌صورت عمومی منتشر کند."
+>
+Old Eagle intends to publish important project information publicly, including token contract information, supply information, official website, trading links and project updates.
+</p>
+
 <p>
-The roadmap represents the project's development goals and may evolve
-according to market conditions, technical opportunities, community activity
-and overall project progress.
+
+<a
+href="https://aliarefialiarefi69.github.io/old-eagle/"
+target="_blank"
+rel="noopener"
+data-en="Official Old Eagle Website"
+data-fa="وب‌سایت رسمی عقاب پیر"
+>
+Official Old Eagle Website
+</a>
+
 </p>
 
 </section>
 
 
-<section>
+<section class="card">
 
-<h2>9. Transparency</h2>
+<h2
+data-en="10. Risk Disclosure"
+data-fa="۱۰. افشای ریسک"
+>
+10. Risk Disclosure
+</h2>
 
-<p>
-Old Eagle aims to provide publicly accessible information about the token,
-smart contract, liquidity and project development through its official website,
-official channels and public blockchain data.
-</p>
+<div class="warning">
 
-<p>
-OEAG contract information and transactions are publicly verifiable
-on the TON blockchain.
-</p>
-
-<p>
-Users should independently verify the official contract address and project
-information before purchasing, selling or interacting with OEAG.
-</p>
-
-</section>
-
-
-<section>
-
-<h2>10. Risk Disclosure</h2>
-
-<p>
-OEAG is a digital asset and its market value may fluctuate significantly.
-Digital assets involve risks, including market volatility, liquidity risk,
-technical risks and changes in the broader cryptocurrency market.
-</p>
-
-<p>
-There is no guarantee of price appreciation, exchange listings,
-adoption, liquidity or future project success.
-</p>
-
-<p>
-<strong>
-Any purchase, sale, transfer or trading of OEAG is undertaken entirely
-at the buyer's or trader's own responsibility and risk.
+<strong
+data-en="Important:"
+data-fa="مهم:"
+>
+Important:
 </strong>
+
+<span
+data-en="OEAG is a cryptocurrency token and its market value can change significantly. There is no guarantee that OEAG will increase in value, reach any particular price, be listed on any particular exchange, or attract a particular number of users."
+data-fa="OEAG یک توکن رمزارزی است و ارزش بازار آن ممکن است به‌شدت تغییر کند. هیچ تضمینی وجود ندارد که ارزش OEAG افزایش یابد، به قیمت مشخصی برسد، در صرافی خاصی فهرست شود یا تعداد معینی کاربر جذب کند."
+>
+OEAG is a cryptocurrency token and its market value can change significantly. There is no guarantee that OEAG will increase in value, reach any particular price, be listed on any particular exchange, or attract a particular number of users.
+</span>
+
+</div>
+
+
+<p
+data-en="Users should conduct their own research and understand the risks before buying, selling or holding OEAG. Any purchase, sale, transfer or trade of OEAG is made at the user's own responsibility and risk."
+data-fa="کاربران باید پیش از خرید، فروش یا نگهداری OEAG، تحقیقات مستقل انجام دهند و ریسک‌ها را درک کنند. هرگونه خرید، فروش، انتقال یا معامله OEAG با مسئولیت و ریسک خود کاربر انجام می‌شود."
+>
+Users should conduct their own research and understand the risks before buying, selling or holding OEAG. Any purchase, sale, transfer or trade of OEAG is made at the user's own responsibility and risk.
 </p>
 
 </section>
 
 
-<section>
+<section class="card">
 
-<h2>11. Official Information</h2>
+<h2
+data-en="11. Official Information"
+data-fa="۱۱. اطلاعات رسمی"
+>
+11. Official Information
+</h2>
 
 <p>
-Old Eagle (OEAG)
+
+<strong
+data-en="Project:"
+data-fa="پروژه:"
+>
+Project:
+</strong>
+
+Old Eagle
+
+<br>
+
+<strong>
+Symbol:
+</strong>
+
+OEAG
+
+<br>
+
+<strong
+data-en="Network:"
+data-fa="شبکه:"
+>
+Network:
+</strong>
+
+TON
+
+<br>
+
+<strong
+data-en="Total Supply:"
+data-fa="عرضه کل:"
+>
+Total Supply:
+</strong>
+
+1,000,000,000 OEAG
+
+<br>
+
+<strong
+data-en="Decimals:"
+data-fa="اعشار:"
+>
+Decimals:
+</strong>
+
+9
+
 </p>
 
-<p>
-Network: TON
-</p>
+<div class="contract">
 
-<p class="contract">
-Contract:
-EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M
-</p>
+EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
+
+</div>
 
 </section>
+
+
+<footer class="footer">
+
+<span
+data-en="Old Eagle (OEAG) — Whitepaper 1.0"
+data-fa="عقاب پیر (OEAG) — وایت‌پیپر نسخه ۱.۰"
+>
+Old Eagle (OEAG) — Whitepaper 1.0
+</span>
+
+<br>
+
+<span
+data-en="Built on TON"
+data-fa="ساخته‌شده بر بستر TON"
+>
+Built on TON
+</span>
+
+</footer>
 
 
 </main>
 
 
-<footer>
+<script>
 
-© 2026 Old Eagle (OEAG)
+function setLang(lang) {
 
-</footer>
+    const fa = lang === 'fa';
+
+    document.documentElement.lang = fa ? 'fa' : 'en';
+
+    document.documentElement.dir = fa ? 'rtl' : 'ltr';
+
+    document
+        .querySelectorAll('[data-en][data-fa]')
+        .forEach(el => {
+            el.textContent =
+                el.getAttribute(fa ? 'data-fa' : 'data-en');
+        });
+
+    document
+        .getElementById('enBtn')
+        .classList
+        .toggle('active', !fa);
+
+    document
+        .getElementById('faBtn')
+        .classList
+        .toggle('active', fa);
+
+}
+
+</script>
 
 </body>
+
 </html>
