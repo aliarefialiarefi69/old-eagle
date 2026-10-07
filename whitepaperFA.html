@@ -1,188 +1,158 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>عقاب پیر (OEAG) — وایت‌پیپر</title>
 
 <style>
 
 * {
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing: border-box;
 }
 
 body {
-
-font-family:
-Tahoma,
-Arial,
-sans-serif;
-
-background:
-radial-gradient(circle at 10% 10%,rgba(0,225,255,.15),transparent 30%),
-radial-gradient(circle at 90% 20%,rgba(130,50,255,.15),transparent 30%),
-#050914;
-
-color:white;
-
-line-height:2;
-
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1d2329;
+    line-height: 2;
 }
 
 .container {
-
-width:92%;
-max-width:900px;
-
-margin:auto;
-
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px 60px;
 }
 
-header {
-
-text-align:center;
-
-padding:45px 0;
-
+.header {
+    background: #111827;
+    color: #fff;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
 }
 
-.logo {
-
-width:150px;
-height:150px;
-
-object-fit:cover;
-
-border-radius:50%;
-
-padding:4px;
-
-background:linear-gradient(135deg,#00eaff,#783cff,#ffd000);
-
-box-shadow:0 0 40px rgba(0,225,255,.25);
-
+.header h1 {
+    margin: 0;
+    font-size: 42px;
 }
 
-h1 {
-
-margin-top:25px;
-
-font-size:42px;
-
-background:linear-gradient(90deg,#fff,#00eaff,#a967ff);
-
--webkit-background-clip:text;
-background-clip:text;
-
-color:transparent;
-
+.header p {
+    font-size: 18px;
+    margin: 8px 0;
 }
 
-.subtitle {
-
-color:#9facbf;
-
-margin-top:10px;
-
+.lang {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
 }
 
-.buttons {
-
-display:flex;
-
-justify-content:center;
-
-gap:10px;
-
-flex-wrap:wrap;
-
-margin:25px 0;
-
+.lang a {
+    display: inline-block;
+    padding: 9px 17px;
+    border: 1px solid #9ca3af;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-.buttons a {
-
-color:white;
-
-text-decoration:none;
-
-padding:9px 17px;
-
-border-radius:25px;
-
-background:rgba(255,255,255,.07);
-
-border:1px solid rgba(255,255,255,.15);
-
+.lang a.active {
+    background: white;
+    color: #111827;
+    font-weight: bold;
 }
 
-section {
-
-margin:20px 0;
-
-padding:25px;
-
-background:rgba(255,255,255,.045);
-
-border:1px solid rgba(255,255,255,.09);
-
-border-radius:18px;
-
+.card {
+    background: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px #00000014;
 }
 
 h2 {
-
-color:#00e5ff;
-
-margin-bottom:12px;
-
+    color: #111827;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 8px;
 }
 
-p {
-
-color:#b2bfd1;
-
-margin-bottom:12px;
-
+h3 {
+    color: #111827;
+    margin-top: 25px;
 }
 
-ul {
-
-padding-right:25px;
-
-color:#b2bfd1;
-
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
 }
 
-li {
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: right;
+}
 
-margin-bottom:8px;
-
+th {
+    background: #f3f4f6;
 }
 
 .contract {
-
-word-break:break-all;
-
-color:#00e5ff;
-
-direction:ltr;
-
-text-align:left;
-
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 10px;
+    word-break: break-all;
+    font-family: monospace;
+    direction: ltr;
+    text-align: left;
 }
 
-footer {
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
 
-text-align:center;
+a:hover {
+    text-decoration: underline;
+}
 
-padding:40px;
+.warning {
+    background: #fff7ed;
+    border-right: 5px solid #f97316;
+    padding: 15px;
+    border-radius: 8px;
+}
 
-color:#718096;
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+@media(max-width:600px) {
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 
 }
 
@@ -190,41 +160,26 @@ color:#718096;
 
 </head>
 
+
 <body>
 
-<header>
+<header class="header">
 
-<div class="container">
+<h1>🦅 عقاب پیر</h1>
 
-<img
-src="1000022248-1.png"
-class="logo"
-alt="Old Eagle Logo"
->
+<p>OEAG — وایت‌پیپر نسخه ۱.۰</p>
 
-<h1>عقاب پیر (OEAG)</h1>
+<p>توکن جامعه‌محور بر بستر TON</p>
 
-<p class="subtitle">
-وایت‌پیپر پروژه Old Eagle
-</p>
-
-<div class="buttons">
-
-<a href="index.html">
-🏠 صفحه اصلی
-</a>
+<div class="lang">
 
 <a href="whitepaperEN.html">
 🇬🇧 English
 </a>
 
-<a
-href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
-target="_blank">
-🦅 خرید OEAG
+<a href="whitepaperFA.html" class="active">
+🇮🇷 فارسی
 </a>
-
-</div>
 
 </div>
 
@@ -234,245 +189,242 @@ target="_blank">
 <main class="container">
 
 
-<section>
+<section class="card">
 
 <h2>۱. مقدمه</h2>
 
 <p>
-Old Eagle (OEAG) یک پروژه دیجیتال جامعه‌محور است که بر بستر بلاکچین TON ساخته شده است.
-هدف پروژه ایجاد ارتباط میان دارایی‌های دیجیتال، NFTها، مشارکت جامعه و کاربردهای آینده Web3 است.
+عقاب پیر (OEAG) یک توکن دیجیتال جامعه‌محور است که بر بستر بلاکچین TON ایجاد شده است.
+هدف پروژه، توسعه اکوسیستمی است که دارایی‌های دیجیتال، توکن‌های غیرمثلی (NFT)،
+فعالیت‌های اجتماعی و برنامه‌های آینده وب۳ را به هم متصل کند.
 </p>
 
 <p>
-عقاب پیر بر شفافیت، توسعه مرحله‌ای و مشارکت جامعه تمرکز دارد.
+عقاب پیر بر پایه عرضه کل ثابت، اطلاعات شفاف روی زنجیره و توسعه تدریجی اکوسیستم طراحی شده است.
 </p>
 
 </section>
 
 
-<section>
+<section class="card">
 
 <h2>۲. اطلاعات توکن</h2>
 
-<ul>
+<table>
 
-<li><strong>نام:</strong> Old Eagle</li>
+<tr>
+<th>مورد</th>
+<th>جزئیات</th>
+</tr>
 
-<li><strong>نماد:</strong> OEAG</li>
+<tr>
+<td>نام</td>
+<td>Old Eagle</td>
+</tr>
 
-<li><strong>شبکه:</strong> TON</li>
+<tr>
+<td>نماد</td>
+<td>OEAG</td>
+</tr>
 
-<li><strong>نوع توکن:</strong> Jetton</li>
+<tr>
+<td>بلاکچین</td>
+<td>TON</td>
+</tr>
 
-<li><strong>کل عرضه:</strong> ۱٬۰۰۰٬۰۰۰٬۰۰۰ OEAG</li>
+<tr>
+<td>استاندارد توکن</td>
+<td>Jetton</td>
+</tr>
 
-<li><strong>اعشار:</strong> ۹</li>
+<tr>
+<td>عرضه کل</td>
+<td>1,000,000,000 OEAG</td>
+</tr>
 
-<li><strong>مالکیت:</strong> لغو شده</li>
+<tr>
+<td>اعشار</td>
+<td>9</td>
+</tr>
 
-</ul>
+<tr>
+<td>وضعیت مالکیت</td>
+<td>لغو شده (Revoked)</td>
+</tr>
+
+</table>
 
 </section>
 
 
-<section>
+<section class="card">
 
 <h2>۳. قرارداد رسمی</h2>
 
 <p>
-قرارداد رسمی Jetton مربوط به OEAG:
+آدرس رسمی قرارداد اصلی جتون (Jetton Master) عقاب پیر:
 </p>
 
-<p class="contract">
-EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M
+<div class="contract">
+
+EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8EJ671tSRSH__M
+
+</div>
+
+<p>
+کاربران باید پیش از تعامل با OEAG، آدرس قرارداد را مستقلاً بررسی کنند.
 </p>
 
 </section>
 
 
-<section>
+<section class="card">
 
-<h2>۴. عرضه ثابت</h2>
+<h2>۴. عرضه ثابت و مالکیت</h2>
 
 <p>
-کل عرضه OEAG برابر با ۱٬۰۰۰٬۰۰۰٬۰۰۰ توکن است.
+عرضه کل عقاب پیر برابر با یک میلیارد OEAG است.
 </p>
 
 <p>
-مالکیت قرارداد لغو شده است و ایجاد توکن‌های جدید از طریق مالک پروژه کنترل نمی‌شود.
-</p>
-
-</section>
-
-
-<section>
-
-<h2>۵. نقدینگی و معاملات</h2>
-
-<p>
-OEAG در حال حاضر در اکوسیستم TON از طریق زیرساخت غیرمتمرکز STON.fi
-قابل معامله است.
-</p>
-
-<p>
-نقدینگی پروژه به‌صورت مرحله‌ای توسعه داده می‌شود و ممکن است
-با رشد پروژه، فعالیت جامعه و شرایط بازار تغییر کند.
-</p>
-
-<p>
-قیمت بازار OEAG می‌تواند بر اساس نقدینگی، فعالیت معاملاتی،
-عرضه و تقاضا تغییر کند. هیچ قیمت ثابت یا تضمین‌شده‌ای برای توکن وجود ندارد.
+مالکیت و دسترسی‌های مدیریتی قرارداد لغو شده‌اند.
+اعلام این موضوع برای شفاف‌سازی وضعیت مدیریتی توکن برای جامعه است.
 </p>
 
 </section>
 
 
-<section>
+<section class="card">
+
+<h2>۵. نقدینگی و معامله</h2>
+
+<p>
+OEAG از طریق زیرساخت‌های غیرمتمرکز روی بلاکچین TON،
+از جمله نقدینگی در STON.fi، برای معامله در دسترس است.
+</p>
+
+<p>
+شرایط معاملاتی فعلی ممکن است با توسعه نقدینگی و فعالیت بازار در طول زمان تغییر کند.
+قیمت بازار بر اساس فعالیت معاملاتی و نقدینگی موجود تعیین می‌شود
+و هیچ قیمت ثابت یا تضمین‌شده‌ای وعده داده نمی‌شود.
+</p>
+
+<p>
+
+<a
+href="https://app.ston.fi/swap?ft=TON&tt=EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M"
+target="_blank"
+rel="noopener"
+>
+معامله OEAG در STON.fi
+</a>
+
+</p>
+
+</section>
+
+
+<section class="card">
 
 <h2>۶. کاربردهای برنامه‌ریزی‌شده</h2>
 
+<p>
+موارد زیر مسیرهای توسعه برنامه‌ریزی‌شده هستند و به معنی فعال بودن فعلی این قابلیت‌ها نیستند:
+</p>
+
 <ul>
 
-<li>فعالیت‌های مرتبط با NFT</li>
+<li>اکوسیستم NFT عقاب پیر</li>
 
-<li>رویدادها و کمپین‌های اجتماعی</li>
+<li>فعالیت‌های اجتماعی مرتبط با NFT</li>
 
-<li>پاداش‌های احتمالی برای جامعه</li>
+<li>پاداش‌های جامعه</li>
 
-<li>خدمات آینده مرتبط با OEAG</li>
+<li>خدمات آینده مبتنی بر OEAG</li>
 
-<li>بررسی همکاری‌های احتمالی در اکوسیستم TON</li>
+<li>کمپین‌ها و رویدادهای اجتماعی</li>
+
+<li>همکاری‌های احتمالی در اکوسیستم TON</li>
 
 </ul>
 
 <p>
-این موارد برنامه‌ها و اهداف توسعه‌ای هستند و اجرای قطعی آن‌ها تضمین نشده است.
+کاربردهای آینده پس از عملیاتی شدن، به‌صورت عمومی اعلام خواهند شد.
 </p>
 
 </section>
 
 
-<section>
+<section class="card">
 
-<h2>۷. برنامه NFT</h2>
-
-<p>
-Old Eagle ممکن است در آینده وارد فعالیت‌های مرتبط با NFT و دارایی‌های دیجیتال کلکسیونی شود.
-</p>
+<h2>۷. اکوسیستم NFT</h2>
 
 <p>
-ویژگی‌ها و مزایای NFTهای آینده ممکن است با توجه به روند توسعه پروژه تغییر کند.
+یکی از مسیرهای برنامه‌ریزی‌شده عقاب پیر، پیوند با اکوسیستم NFT است.
 </p>
+
+<ul>
+
+<li>NFTهایی با موضوع عقاب پیر</li>
+
+<li>کلکسیون‌های دیجیتال محدود</li>
+
+<li>رویدادهای NFT جامعه</li>
+
+<li>فعالیت‌های مرتبط با NFT با استفاده از OEAG</li>
+
+<li>پروژه‌های اختصاصی NFT</li>
+
+</ul>
 
 </section>
 
 
-<section>
+<section class="card">
 
 <h2>۸. نقشه راه</h2>
 
+
+<h3>مرحله ۱ — پایه‌گذاری</h3>
+
 <ul>
 
-<li><strong>مرحله ۱:</strong> ایجاد پروژه و راه‌اندازی توکن</li>
+<li>ایجاد جتون عقاب پیر</li>
 
-<li><strong>مرحله ۲:</strong> توسعه جامعه و افزایش آگاهی از پروژه</li>
+<li>تعیین عرضه ثابت</li>
 
-<li><strong>مرحله ۳:</strong> توسعه کاربردها و فعالیت‌های اکوسیستم</li>
+<li>لغو مالکیت مدیریتی</li>
 
-<li><strong>مرحله ۴:</strong> توسعه اکوسیستم و همکاری‌های احتمالی</li>
+<li>ایجاد و حفظ نقدینگی</li>
 
-<li><strong>مرحله ۵:</strong> توسعه نقدینگی و فعالیت بازار</li>
+<li>راه‌اندازی وب‌سایت رسمی</li>
 
-<li><strong>مرحله ۶:</strong> بررسی و ارسال درخواست برای لیست شدن در صرافی‌های متمرکز (CEX)</li>
-
-<li><strong>مرحله ۷:</strong> توسعه بلندمدت پروژه و کاربردهای آینده</li>
+<li>ارسال OEAG برای بررسی در اکوسیستم کیف پول</li>
 
 </ul>
 
-<p>
-نقشه راه اهداف توسعه‌ای پروژه را نشان می‌دهد و ممکن است با توجه به شرایط بازار،
-فرصت‌های فنی، فعالیت جامعه و پیشرفت پروژه تغییر کند.
-</p>
 
-</section>
+<h3>مرحله ۲ — جامعه‌سازی</h3>
 
+<ul>
 
-<section>
+<li>ایجاد حضور در شبکه‌های اجتماعی</li>
 
-<h2>۹. شفافیت</h2>
+<li>انتشار محتوای آموزشی</li>
 
-<p>
-Old Eagle تلاش می‌کند اطلاعات عمومی مربوط به توکن، قرارداد هوشمند،
-نقدینگی و روند توسعه پروژه را از طریق وب‌سایت رسمی،
-کانال‌های رسمی و داده‌های عمومی بلاکچین ارائه کند.
-</p>
+<li>معرفی برند عقاب پیر</li>
 
-<p>
-اطلاعات مربوط به قرارداد و تراکنش‌های OEAG بر روی بلاکچین TON
-قابل بررسی عمومی است.
-</p>
+<li>گسترش جامعه</li>
 
-<p>
-کاربران باید قبل از هرگونه خرید، فروش یا تعامل با OEAG،
-آدرس قرارداد و اطلاعات رسمی پروژه را شخصاً بررسی کنند.
-</p>
-
-</section>
+</ul>
 
 
-<section>
+<h3>مرحله ۳ — کاربردها</h3>
 
-<h2>۱۰. افشای ریسک</h2>
+<ul>
 
-<p>
-OEAG یک دارایی دیجیتال است و ارزش بازار آن می‌تواند به‌طور قابل توجهی تغییر کند.
-دارایی‌های دیجیتال دارای ریسک‌هایی مانند نوسانات بازار،
-ریسک نقدینگی، ریسک‌های فنی و تغییرات بازار گسترده ارزهای دیجیتال هستند.
-</p>
+<li>توسعه برنامه‌های مرتبط با NFT</li>
 
-<p>
-هیچ تضمینی برای افزایش قیمت، لیست شدن در صرافی‌ها،
-پذیرش، نقدینگی یا موفقیت آینده پروژه وجود ندارد.
-</p>
+<li>راه‌اندازی فعالیت‌های اجتماعی</li>
 
-<p>
-<strong>
-هرگونه خرید، فروش، انتقال یا معامله OEAG کاملاً بر عهده و مسئولیت
-و ریسک خریدار یا معامله‌گر است.
-</strong>
-</p>
-
-</section>
-
-
-<section>
-
-<h2>۱۱. اطلاعات رسمی</h2>
-
-<p>
-Old Eagle (OEAG)
-</p>
-
-<p>
-شبکه: TON
-</p>
-
-<p class="contract">
-Contract:
-EQD3mKySkhoK02UCAyuMraeofLt0I1Ox2Y8E671tSRSH__M
-</p>
-
-</section>
-
-
-</main>
-
-
-<footer>
-
-© 2026 Old Eagle (OEAG)
-
-</footer>
-
-</body>
-</html>
+<li>
